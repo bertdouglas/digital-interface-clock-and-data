@@ -1,0 +1,7 @@
+_ISR: CODE, 4 0 29
+_main: CODE, 37 0 30
+__initialization: CODE, 35 0 0
+_adc: CODE, 110 0 6
+_eeprom_read: CODE, 67 0 18
+_eeprom_write: CODE, 85 0 25
+Total: 108

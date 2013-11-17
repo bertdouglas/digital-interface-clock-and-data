@@ -1,0 +1,6 @@
+__stringtab: STRING, 4 0 1
+_main: CODE, 2017 0 25
+__initialization: CODE, 2015 0 0
+_adc: CODE, 2042 0 6
+_gray_code: STRING, 5 0 16
+Total: 48

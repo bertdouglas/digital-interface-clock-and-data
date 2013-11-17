@@ -1,0 +1,5 @@
+_main: CODE, 1960 0 60
+_check_switch: CODE, 2020 0 22
+__initialization: CODE, 1956 0 2
+_adc: CODE, 2042 0 6
+Total: 90
