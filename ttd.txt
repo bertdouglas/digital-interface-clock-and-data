@@ -13,6 +13,7 @@ Find some example code and learn how to simulate it on MPLAB.
   Some progress.  Found and downloaded example code.  Only found C.
   Looks easy so far.
   Got it to build.  No debug/simulate yet.
+  Abandoned.
 
 Make regularized frame timing hierarchy.
   Do ascii art timing diagrams.
@@ -30,6 +31,7 @@ Make regularized frame timing hierarchy.
 
   Will be able to change the constants to change timing, without messing
   with the code.
+  Done.
 
 
 Make a python script to generate timing costants.
@@ -37,4 +39,30 @@ Make a python script to generate timing costants.
 
 Submit timing diagrams and constants for review.
   No response to my last message.  How to submit.
+
+Check that functions are being inlined
+  this is to reduce stack usage, and to increase speed.
+  if not inlined by default, look for inline keyword.
+
+Figure out how to use simulator
+  Code now set up to do output in a loop continuously.  No input.
+  It is ready to run.  Need to verify timing in simulator.
+
+Figure out how to use the timer
+  This is needed so that it is possible to do PC input, while 
+  controlling total time used for input.
+  Obviously, if we are stuck in a delay loop, can't be doing handshaking
+  with PC.
+
+Go back and review timing hierarchy.  
+  Is it as clear and simple as possible?
+  Consider changing names.
+  Make sure pyton generator and spreadsheet are consistent.
+  Should gap4 be shown before frame4 ?
+  Is the frame4 step even needed ?
+
+
+
+
+
 

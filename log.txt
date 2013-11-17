@@ -52,11 +52,43 @@ are large, but used only for documentation purposes.
 
 Reorganize fles.
 Put into git.
+Suppress build results.
+Add temp time constants to enable complete compile/build.
+Now getting error on static variables.
 
-Write python script to generate c code for compile time definitions.
-Change naming convention to all upper case.
+    #define DATA_BUF_SIZE 78;
+    uint8_t data_buf[DATA_BUF_SIZE];    // line 350
+    uint8_t data_pos = 0;
 
-Check if response from hilario.
+get this error:
+
+    CLEAN SUCCESSFUL (total time: 66ms)
+    "/opt/microchip/xc8/v1.21/bin/xc8" --pass1  --chip=16F1826 -Q -G  --double=24 --float=24 --opt=default,+asm,+asmfile,-speed,+space,-debug --addrqual=ignore --mode=free -P -N255 --warn=0 --asmlist --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,+osccal,-resetbits,-download,-stackcall,+clib --output=-mcof,+elf "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -obuild/default/production/main.p1  main.c 
+    main.c:350: warning: (983) storage class redeclared for "uint8_t"
+    main.c:350: error: (1098) conflicting declarations for variable "uint8_t" (/opt/microchip/xc8/v1.21/include/stdint.h:43)
+    (908) exit status = 1
+    make: *** [build/default/production/main.p1] Error 1
+
+    BUILD FAILED (exit value 2, total time: 2s)
+
+Really puzzled.  Looked at include file.  Dont' see anything strange.
+Perhaps something general about static variables.
+Maybe it is too big, not enough memory.
+Maybe special directive is needed.
+Back to google and compiler handbook.
+
+Found a partial declaration several lines before.
+Now building ok.
+
+Looks like getting full complete build.
+Using about 5 percent of the code space.  Seems sufficient.  No worries.
+Using about half the data space, but only have one large buffer.
+Do both debug and production builds.  Not sure what is the difference.
+
+Not much going on with stack space.  But most if not all of my functions
+would be inlined, I hope.  Perhaps there is an inline keyword.
+
+Check if response from hilario. No.
 
 
 

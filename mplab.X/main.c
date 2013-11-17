@@ -335,8 +335,6 @@ Level 4 framing, frame4 (called frame in spec)
 #define Tframe2_gap 0
 
 
-const uint16_t 
-
 // Derived timing constants
 
 
@@ -346,7 +344,7 @@ global data buffer
 Used for both input and output.
 */
 
-const DATA_BUF_SIZE = 78;
+#define DATA_BUF_SIZE 78
 uint8_t data_buf[DATA_BUF_SIZE];
 uint8_t data_pos = 0;
 
@@ -400,6 +398,11 @@ Top level loop
 */
 
 void main(void) {
+  
+  for (;;) {
+    data_pos = 0;
+    frame3();
+  }
 
 }
 
