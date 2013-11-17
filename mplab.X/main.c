@@ -328,6 +328,13 @@ Level 4 framing, frame4 (called frame in spec)
 
 // Independent timing constants
 
+// FIXME temporary for testing
+#define T0 18
+#define Tframe0_gap 0
+#define Tframe1_gap 0
+#define Tframe2_gap 0
+
+
 const uint16_t 
 
 // Derived timing constants
@@ -360,31 +367,41 @@ void frame0(void) {
     d >>= 1;
   }
   serial_data_out(0);
+  __delay_us(Tframe0_gap);
 }
 
 void frame1(void) {
   uint8_t n;
   for ( n=6; n!=0; n-- ) {
     frame0();
-    __delay_us(Tframe0_gap);
   }
+  __delay_us(Tframe1_gap);
 }
 
 void frame2(void) {
   uint8_t n;
     for ( n=6; n!=0; n-- ) {
     frame1();
-    __delay_us(Tframe1_gap);
   }
+  __delay_us(Tframe2_gap);
 }
 
 void frame3(void) {
-  frame2();  __delay_us(Tframe2_gap);
-  frame2();  __delay_us(Tframe2_gap);
-  frame1();  __delay_us(Tframe1_gap);
+  frame2();  
+  frame2();
+  frame1();
+  // There is no gap delay here.
+  // Input from host is done during this time.
 }
 
 
+/*------------------------------------------------------------------------------
+Top level loop
+*/
+
+void main(void) {
+
+}
 
 
 
