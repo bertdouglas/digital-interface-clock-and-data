@@ -1,0 +1,343 @@
+﻿
+th, td, caption {border: 1px solid #CFCFCF;}
+
+ul.quicklinks {float:right;list-style:none; list-style-type:none; list-style-image:none;z-index:100;padding: 0;margin: 0; width: 100%; position:relative;}
+
+ul.quicklinks > li {color:#ffffff; background: #265477; padding:3px 18px;border-left: 1px solid #265477;border-right: 1px solid #265477;border-top: 1px solid #265477;/* easy rounded corners for modern browsers */-moz-border-radius: .5em; -webkit-border-radius: .5em; border-radius: .5em; }
+ul.quicklinks > li:hover {color: #000000;text-decoration:none; background: #ffffff; border-left: 1px solid #265477;border-right: 1px solid #265477;border-top: 1px solid #265477;/* easy rounded corners for modern browsers */-moz-border-radius: .5em .5em 0 0 ; -webkit-border-radius: .5em .5em 0 0 ; border-radius:.5em .5em 0 0 ;}
+
+ul.quicklinks > li > ul {display: none; min-height:250px; white-space:nowrap; position: absolute; top:21px; right:0px; border: 1px solid #265477; padding: 0;background: #ffffff ; z-index: 4000;list-style:none; list-style-type:none; list-style-image:none; text-transform:none;/* easy rounded corners for modern browsers */-moz-border-radius: .5em 0 .5em .5em; -webkit-border-radius: .5em 0 .5em .5em; border-radius: .5em 0 .5em .5em;}
+ul.quicklinks > li:hover > ul, ul.quicklinks > li > a:hover > ul { display:inline;z-index:-100;}
+
+ul.quicklinks > li > ul > li { padding: 4px 10px;line-height: 1.25em;}
+ul.quicklinks > li > ul > li > a {text-decoration: none;color: #265477 ; font-size: 1em; }
+ul.quicklinks > li > ul > li:hover, ul.quicklinks > li > ul > li.sfhover {background: #265477; color:#ffffff}
+ul.quicklinks > li > ul > li > a:hover, ul.quicklinks > li > ul > li > a.sfhover, ul.quicklinks > li > ul > li:hover a, ul.quicklinks > li > ul > li.sfhover a {color:#ffffff}
+
+
+.PriceAndSamples {font-size:10px}
+.PriceAndSamples th, #tableID td, #tableID caption,  {padding:4px}
+
+
+.devicelangdocs {display:none;}
+
+.grayRow
+{
+    background-color: #e6e6e6;
+}
+
+
+/***** DocumentationContent *****/
+#DocumentationContent div
+{
+    /*margin-bottom: 10px;*/
+}
+
+#DocumentationContent .titleRow td
+{
+    padding: 5px 0 0 5px;
+    font-weight: bold;
+}
+#DocumentationContent .iconsColumn
+{
+    width: 30px;
+}
+
+#DocumentationContent .lastUpdated
+{
+    padding-right: 25px;
+    width: 80px;
+}
+
+
+/***** PricingandSamplesContent *****/
+#PricingandSamplesContent
+{
+}
+/***** DevelopmentToolsContent *****/
+#DevelopmentToolsContent
+{
+}
+/***** RoHSInformationContent *****/
+#RoHSInformationContent
+{
+}
+#RoHSInformationContent .dtgRoHSData
+{
+    border-collapse: separate; /*border: solid 1px Black; */
+    width: 100%;
+}
+#RoHSInformationContent .dtgRoHSData td
+{
+    border: solid 1px #a09790;
+}
+
+#RoHSInformationContent .imagesDescription
+{
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 11px;
+    color: Black;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    
+}
+
+#RoHSInformationContent .notesDescription
+{
+    float: right;
+    width: 590px;
+    color: #AFA6A0;
+    font-size: 9px;
+    font-weight: bold;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+    text-align: right;
+}
+#RoHSInformationContent .notesDescription a
+{
+    text-decoration: none;
+    color: #AFA6A0;
+}
+
+#RoHSInformationContent table .header
+{
+    background-color: #ada49d;
+    color: White;
+    text-align: center;
+}
+#RoHSInformationContent table .header td:first-child{text-align:left;}
+
+#RoHSInformationContent table .header a
+{
+    background-color: #ada49d;
+    color: White;
+    text-align: center;
+}
+#RoHSInformationContent table .GridItem
+{
+    background-color: White;
+}
+#RoHSInformationContent table .GridAltItem
+{
+    background-color: #f7f5f3;
+}
+#RoHSInformationContent .PanelHeader{font-weight:bold;}
+
+/*================= print ====================*/
+
+#containerPrint { padding:8px; width:816px;}
+
+/*================= general classes ====================*/
+
+/* Bubble section style */
+.divPopup
+{
+	width: 10%;
+	background-color: #E6E6E6;
+	z-index: 10;
+	position: absolute;
+	margin-top:10px;
+	border: 1px black;
+	
+}
+
+.tblPopup
+{
+    border-collapse: collapse;
+	border:solid 1px #AAAAAA;
+	padding: 0;
+	border-spacing: 1;
+	width: 100%;
+	
+}
+
+.tblPopup a
+{
+    text-decoration: none;
+}
+.tblPopup a:hover{text-decoration:underline;background-color:Transparent;}
+/**/
+/***** Quick links *****/
+
+.horizontalcssmenu
+{
+    position:relative;
+}
+
+.horizontalcssmenu ul
+{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/*Top level list items */
+.horizontalcssmenu ul li
+{
+    /* border: 1px solid; border-color:#00cc33; border-bottom-width:thin; border-top-width:1; */
+    width: 100%; /*Width of top level menu link items*/
+    list-style-type: none;
+    position: relative;
+    float: none;
+    height: auto;
+    top: auto;
+    padding:5px;
+    background:#CFCFCF;
+}
+
+/*Top level menu link items style*/
+.horizontalcssmenu ul li a
+{
+    height: 13;
+    display: block;
+    text-decoration: none;
+    padding: 1px,1px,1px,3px;
+    vertical-align: middle;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/*Sub level menu .horizontalcssmenu ul li ul*/
+.subLevelUl
+{
+    height: auto;
+    border: 1px solid Gray;
+    background: #CFCFCF;
+    display: block;
+    visibility: hidden;
+    position: absolute;
+    left:auto;
+    right:0px;
+    z-index: 10000;
+    white-space:nowrap;
+    width: auto; /*-webkit-border-radius: 4px;     -moz-border-radius: 4px;     padding:4px 4px;     border-radius: 4px;     behavior: url(Includes/PIE.htc);*/
+}
+
+/*Sub level menu list items horizontalcssmenu ul li ul li*/
+.horizontalcssmenu .subLevelLi
+{
+    margin-left: 0;
+    margin-right: 0;
+}
+.subLevelLi
+{
+    list-style-image: none;
+}
+.subLevelLi:hover
+{
+    background-color: #E9E9EB;
+}
+
+.horizontalcssmenu .subLevelLi a
+{
+    height: 14;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/*child level menu .horizontalcssmenu ul li ul li ul*/
+.childLevelUl
+{
+    display: block;
+    visibility: hidden;
+    z-index: 100;
+    border-left: 1px solid #3366cc;
+    border-bottom: 1px solid #3366cc;
+    border-right: 1px solid #3366cc;
+    border-top: 1px solid #3366cc;
+}
+
+/*Child level menu list items horizontalcssmenu ul li ul li ul li*/
+.horizontalcssmenu .childLevelLi
+{
+    width: 100%;
+    position: relative;
+    left: auto;
+    right: 10px;
+    border-left: 0px solid #3366cc;
+    border-bottom: 0px solid #3366cc;
+    border-right: 0px solid #3366cc;
+    border-top: 0px solid #3366cc;
+    background: White;
+}
+
+.horizontalcssmenu .childLevelLi a
+{
+    height: 12;
+    margin-top: 1;
+    margin-bottom: 1;
+    left: auto;
+}
+/***** Cart *****/
+.CartContainerExtended
+{
+    background-color: Gray;
+    border: solid 1px Gray;
+    height: auto;
+    width: 235px;
+    position: relative;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    padding: 4px 4px;
+    border-radius: 4px;
+    behavior: url(../Includes/PIE.htc);
+}
+.MiniCartTopBar
+{
+    height: 20px;
+    background-color: #DCDCDC;
+    line-height: 20px;
+    text-align: center;
+}
+.CartContainerfx
+{
+    height: 100px;
+    overflow: auto;
+    background-color: #E9E9EB;
+}
+.MiniCartBottomBar
+{
+    height: 20px;
+    background-color: #DCDCDC;
+    line-height: 20px;
+    text-align: center;
+}
+.spanCart
+{
+    top:40px;
+    position: absolute;
+    left: -160px;
+    z-index: 20000;
+}
+/***** This exists in header.css *****/
+.NormalTextGreenLargerBold
+{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+    color: Green;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.RedLargerBold
+{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+    color: #ff0000;
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    text-decoration: none;
+}
+/***** This exists in header.css - END*****/
+/***** ROHS Page - Begin*****/
+.headerRohs .title{float:left;}
+.headerRohs .logo{float:right;}
+.searchSection table{width:100%;}
+.searchSection input[type="submit"]{width:95px;}
+.searchSection p{font-weight:bold;font-size:13px;font-family:Arial;}
+.note p{font-size:smaller;}
+.imgJedInd, .imgPic, .imgPicCHN, .imgEUIP{margin-top:2px;margin-bottom:2px;}
+#RoHSInformationContent .PanelHeader p{font-weight:bold;font-size:13px;font-style:italic;}
+/***** ROHS Page - End *****/

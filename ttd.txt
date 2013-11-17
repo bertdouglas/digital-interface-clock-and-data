@@ -1,0 +1,40 @@
+Identify version of PIC to use.
+  Done:  PIC16F1826
+  Used device selector at microchip website.
+  Recent, better on chip debug, and other features than 627 proposed by customer.
+  Lower price that 627.
+  Is the lowest price unit listed at microchip with sufficient pins and memory.
+
+Obtain tools.
+  Done:  Downloaded MPLAB X IDE for linux from microchip website.
+  Also got a free C compiler.
+
+Find some example code and learn how to simulate it on MPLAB.
+  Some progress.  Found and downloaded example code.  Only found C.
+  Looks easy so far.
+  Got it to build.  No debug/simulate yet.
+
+Make regularized frame timing hierarchy.
+  Do ascii art timing diagrams.
+  Assign names to all the times.
+  Make as many formulas as possible.
+  Minimize the set of independent times.
+  Got it down to 5 constants.
+  Made spread sheet to calculate the dependent times.
+  
+  The trouble with the provided timing diagram is that it was irregular and
+  inconsistent in how it treated gaps after various repeated elements.
+  Like gap is missing after last one in group.  Change that so gaps are
+  uniform.  Will be able to make function to send each element, and then
+  compose them easily.
+
+  Will be able to change the constants to change timing, without messing
+  with the code.
+
+
+Make a python script to generate timing costants.
+  Do this numerically. Use in both code and in docs.
+
+Submit timing diagrams and constants for review.
+  No response to my last message.  How to submit.
+

@@ -1,0 +1,72 @@
+﻿.titleWelcome { font: bold 14px Arial, Verdana, Helvetica, sans-serif; color: #000000; }
+.titleName { font: bold 14px Arial, Verdana, Helvetica, sans-serif; color: #278a37; }
+.titleMsg { font: normal 11px Arial, Verdana, Helvetica, sans-serif; color: #000000; }
+
+.tdPadiddingLeft {
+    padding-left: 15px;
+}
+
+.boxSteps { width: 250px; background-color: transparent; border: 1px solid #e2e2e2; padding: 1px 1px 1px 1px; /*  margin-top: 15px;*/ float: left; }
+
+.boxSteps table { width: 240px; /*padding-left: 20px;     padding-right: 10px;*/ margin-left: auto; margin-right: auto; }
+.boxSteps table a { color: #309b3b; }
+.boxSteps table a:hover { text-decoration: underline; }
+.boxSteps table td { height: 25px; line-height: 25px; border-bottom: 1px solid #e2e2e2; width: 300px; }
+
+.boxStepsTwo { width: 250px; background-color: transparent; border: 1px solid #e2e2e2; padding: 1px 1px 1px 1px; /*  margin-top: 15px;*/ float: left; }
+
+.boxStepsTwo table { width: 240px; /*padding-left: 20px;     padding-right: 10px;*/ margin-left: auto; margin-right: auto; }
+.boxStepsTwo table a { color: #309b3b; }
+.boxStepsTwo table a:hover { text-decoration: underline; }
+.boxStepsTwo table td { height: 25px; line-height: 25px; width: 300px; }
+
+.grayBoxQuickLinks { width: 240px; /* height: 30px;*/ /* line-height: 30px;*/ background-color: #EDEDED; float: left; /* text-indent: 10px;*/ font-weight: bold; padding-left: 10px; }
+.boxLinksBold { width: 100%; /* height: 30px;*/ color: Black; /*  line-height: 30px;*/ background-color: #EDEDED; /*  float: left;*/ /* text-indent: 10px;*/ font-weight: bold; font-size: 11px; font-family: arial,verdana,helvetica; }
+
+
+.grayBoxQuickLinksMain { width: 250px; background-color: transparent; border: 1px solid #e2e2e2; padding: 1px 1px 1px 1px; /*  margin-top: 15px;*/ float: left; }
+
+.grayBoxQuickLinksMain table { width: 240px; /*padding-left: 20px;     padding-right: 10px;*/ margin-left: auto; margin-right: auto; }
+.grayBoxQuickLinksMain table a { color: #309b3b; }
+
+.grayBoxQuickLinksMain table a:hover { text-decoration: underline; }
+
+.grayBoxQuickLinksHeader { width: 250px; background-color: #ededed; border: 1px solid #e2e2e2; padding: 1px 1px 1px 1px; /*  margin-top: 15px;*/ float: left; }
+
+.grayBoxQuickLinksHeader table { width: 240px; /*padding-left: 20px;     padding-right: 10px;*/ margin-left: auto; margin-right: auto; }
+.grayBoxQuickLinksHeader table a { font-weight: bold; color: #309b3b; }
+
+.grayBoxQuickLinksHeader table a:hover { text-decoration: underline; }
+
+
+
+.showBorderaBottom { height: 25px; line-height: 25px; border-top: 1px solid #e2e2e2; }
+
+
+
+.tdBoxHeader { font-family: Arial,verdana,helvetica; font-size: 11px; font-weight: bold; background-color: #ededed; height: 20px; line-height: 20px; text-indent: 10px; border-top: 1px solid #e2e2e2; border-left: 1px solid #e2e2e2; border-right: 1px solid #e2e2e2; }
+
+.showMsg { border-top: gray 1px groove; border-right: gray 1px groove; border-left: gray 1px groove; border-bottom: gray 1px groove; background-color: #ffffff; }
+.LoginUserTable { border: #e2e2e2 1px solid; width: 120px; height: 120px; margin: 15px 0px 15px 13px; background-color: #ededed; }
+.LoginRegisterTable { border: #e2e2e2 1px solid; width: 120px; height: 120px; margin: 15px 0px 15px 13px; background-color: #ededed; }
+.ContentHeadPage { color: Black; font-family: arial,verdana,helvetica; font-size: medium; font-weight: bold; }
+.tdPadiddingLeft { padding-left: 15px; }
+
+.tdSize1 { width: 48%; }
+.ie .tdSize1 { width: 48%; }
+.ie7 .tdSize1 { width: 48%; }
+.ie8 .tdSize1 { width: 48%; }
+.ie9 .tdSize1 { width: 48%; }
+
+.tdSize2 { width: 2%; }
+.ie .tdSize2 { width: 2%; }
+.ie7 .tdSize2 { width: 2%; }
+.ie8 .tdSize2 { width: 2%; }
+ie9 .tdSize2 { width: 2%; }
+.tdSize3 { width: 30px; }
+.ie .tdSize3 { width: 30px; }
+.ie7 .tdSize3 { width: 30px; }
+.ie8 .tdSize3 { width: 30px; }
+ie9 .tdSize3 { width: 30px; }
+.tdPadding { padding-right: 15px; }
+

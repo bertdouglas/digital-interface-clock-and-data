@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------
+15 November 2013
+
+Started work on abstraction of serial output frame timing.
+Draw diagrams.  Make symbolic names for times.
+Use a consistent layered approach.
+
+Make spreadsheet to calculate dependent values.
+
+--------------------------------------------------------------------------------
+16 November 2013
+
+Work on pin and signal assignments.
+Draw diagrams.  Make tables of assignments.
+A lot of consulting of device data sheet.
+
+Code primitive app domain i/o functions
+Code device configuration, including i/o and clocks.
+
+
+--------------------------------------------------------------------------------
+17 November 2013
+
+Learn how to use mplab.  Create project.
+Find where mplab include files are located.
+/opt/microchip/xc8/...
+
+Start compiling.
+Figure out what standard include files are needed.
+  xc8.h
+  stdint.h
+  stdbool.h
+  stddef.h
+
+Start compiling code written yesterday.
+Lots of misunderstanding about how to use bitfields.
+Resolve by reading the include file.  There is no xc8.h include file.
+Instead it gets redirected to a file corresponding to the processor name.
+
+Learned that LATA5 is not defined for this processor.
+This is the mclr-/vpp pin.  It can be used by software for input,
+but not for output.
+
+So swap the DR and ACK signals.
+Otherwise I have to use the pins reserved for external oscillator.
+Rather not do that.
+
+Now compiling, except for the references to serial frame time constants.
+I am not happy defining these manually.  Would rather the process be
+automated.  Can't really define them with C code, as some of the numbers
+are large, but used only for documentation purposes.
+
+Reorganize fles.
+Put into git.
+
+Write python script to generate c code for compile time definitions.
+Change naming convention to all upper case.
+
+Check if response from hilario.
+
+
+
+
+
+
+

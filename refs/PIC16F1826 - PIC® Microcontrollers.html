@@ -1,0 +1,1900 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0067)http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="https://www.microchip.com/Media/favicon.ico" rel="SHORTCUT ICON"><link href="./PIC16F1826 - PIC® Microcontrollers_files/screen.css" rel="stylesheet" type="text/css"><link href="./PIC16F1826 - PIC® Microcontrollers_files/jquery-ui-1.8.14.custom.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" async="" src="./PIC16F1826 - PIC® Microcontrollers_files/ga.js"></script><script type="text/javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/jquery-1.7.1.min.js"></script>
+    <script src="./PIC16F1826 - PIC® Microcontrollers_files/jquery-ui-1.8.16.custom.min.js" type="text/javascript"></script>
+    <script src="./PIC16F1826 - PIC® Microcontrollers_files/jquery.autocomplete.js" type="text/javascript"></script>
+    
+    
+    <script type="text/javascript" language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/Devices.js"></script>
+    <script type="text/javascript" language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/BookBagAjax.js"></script>
+    <script type="text/javascript" language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/jquery.hoverIntent.minified.js"></script>
+    <script type="text/javascript" language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/FormMisc.js"></script>
+    <script type="text/javascript" language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/ScriptLibrary.js"></script>
+    <link href="./PIC16F1826 - PIC® Microcontrollers_files/wwwProducts.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () {
+                $("#MainContent").accordion({
+                    collapsible: true,
+                    active: false,
+                    autoHeight: false,
+                    animated: false
+                });
+                //set accordion header options
+                $("#MainContent").accordion("option", "icons",
+                { 'header': 'defaultIcon', 'headerSelected': 'selectedIcon' });
+
+                $(".backToTop").click(function (event) {
+                    event.stopPropagation();
+                    $('html,body').animate({ scrollTop: 0 }, 'slow');
+                });
+            });
+        });
+        function toggleSection(section) {
+            $("#MainContent").accordion("option", "active", section);
+        }
+        
+    </script>
+ 
+
+    
+    
+   <!-- Google Analytics Snippet -->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-2724382-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+<!-- Google Analytics Snippet -->
+ <script type="text/javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/jquery.googleanalytics.js"> </script>
+
+<title>
+	PIC16F1826 - PIC® Microcontrollers
+</title></head>
+<body>
+    <!-- ==================== Begin Header ======================== -->
+    <script src="./PIC16F1826 - PIC® Microcontrollers_files/header.jscript.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    function search_datasheets() {
+        //alert("/TechDoc.aspx?type=datasheet&product=" + $('#dsSearchbar').val());
+        if ($('#dsSearchbar').val() == 'Search Data Sheets') {
+            window.location = '/TechDoc.aspx?type=datasheet';
+        } else {
+            window.location = '/TechDoc.aspx?type=datasheet&product=' + $('#dsSearchbar').val();
+        }
+    }
+
+    function runScript(e) {
+        if (e.keyCode == 13) {
+            window.location = '/TechDoc.aspx?type=datasheet&product=' + $('#dsSearchbar').val();
+            return false;
+        }
+    }
+
+
+</script>
+
+
+
+
+<div id="superheader" class="clearfix">
+    <div id="header" class="clearfix">
+        <!-- ==================== Logo ======================== -->
+        <div id="logo" class="left">
+            <a href="http://www.microchip.com/">Microchip</a>
+        </div>
+        <div id="headright">
+            <!-- ==================== Search Bar =========================== -->
+            <form action="Javascript:SearchEnter();" method="GET" class="append-bottom"> 
+        	    <input name="submit" value="search" id="submit" type="button" onclick="javascript:SearchEnter();return false;">
+		        <input id="searchbar" name="searchbar" value="Search Microchip" autocomplete="off" type="text" maxlength="500" class="ac_input" onclick="this.value=&#39;&#39;;" onfocus="this.select()" onblur="this.value=!this.value?&#39;Search Microchip&#39;:this.value;">
+            </form>
+            <!-- ==================== Language Bar ======================== -->
+            <div class="langbar">
+            <select id="langs" selected="selected">
+                <option value="cn">Chinese</option>
+                <option value="jp">Japanese</option>
+                <option value="en" selected="selected">English</option>
+            </select>
+            </div>
+            <div id="dsSearch" class="clear">
+                <input id="dsSubmit" type="button" onclick="search_datasheets()" value="Go">
+                <input id="dsSearchbar" name="dsSearchbar" value="Search Data Sheets" onkeypress="return runScript(event)" onclick="this.value=&#39;&#39;;" onfocus="this.select()" onblur="this.value=!this.value?&#39;Search Data Sheets&#39;:this.value;" autocomplete="off" type="text" maxlength="500">
+            </div>
+		        
+            
+        </div>
+        <ul class="clear nav">
+            <!-- ==================== Products Menu ======================== -->
+            <li id="menu-products">
+                <a href="http://www.microchip.com/products/" title="Products">Products</a>
+                <ul id="menu-products-section" class="section">
+                    <li class="column">
+                        <a href="http://www.microchip.com/pic/" title="PIC Microcontrollers">PIC® Microcontrollers</a>
+                        <ul>
+                            <!--<li><a href="/8bit/" name="menu8bitMCUs" title="8-bit PIC&reg; Microcontrollers">8-bit PIC<sup>&reg;</sup> MCUs</a></li>-->
+                            <li><a href="http://www.microchip.com/8bit/" title="8-bit PIC Microcontrollers">8-bit PIC<sup>®</sup> MCUs</a></li>
+                            <li><a href="http://www.microchip.com/16bit/" title="16-bit PIC Microcontrollers">16-bit PIC<sup>®</sup> MCUs &amp; dsPIC<sup>®</sup> DSCs</a></li>
+                            <li><a href="http://www.microchip.com/pic32/" title="32-bit PIC Microcontrollers">32-bit PIC<sup>®</sup> MCUs</a></li>
+                        </ul>
+                        <a href="http://www.microchip.com/linear/" title="Amplifiers &amp; Linear">Amplifiers &amp; Linear</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/opamps/" title="Operational Amplifiers">Operational Amplifiers</a></li>
+                            <li><a href="http://www.microchip.com/instrumentationamplifiers/" title="Instrumentation Amplifiers">Instrumentation Amplifiers</a></li>
+                            <li><a href="http://www.microchip.com/comparators/" title="Comparators">Comparators</a></li>
+                            <li><a href="http://www.microchip.com/pga/" title="Programmable Gain Amplifiers &amp; Selectable Gain Amplifiers">PGA &amp; SGA</a></li>
+                            
+                        </ul>
+                        <a href="http://www.smsc.com/index.php?tid=35" target="_blank" title="Automotive - SMSC">Automotive (SMSC)</a>
+                        <a href="http://www.microchip.com/dataconverters/" title="Data Converters">Data Converters</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/analog-digital-converters/" title="Analog-to-Digital Converters">Analog-to-Digital Converters</a></li>
+                            <li><a href="http://www.microchip.com/dac-digital-potentiometers/" title="DAC &amp; Digital Potentiometers ">DAC &amp; Digital Potentiometers</a></li>
+                            <li><a href="http://www.microchip.com/energy-measurement/" title="Energy Measurement">Energy Measurement</a></li>
+                            <li><a href="http://www.smsc.com/index.php?tid=377" target="_blank" title="Power/Current Sensors - SMSC">Power/Current Sensors (SMSC)</a></li>
+                        </ul>
+                    </li>
+                    <li class="column">
+                        <a href="http://www.microchip.com/developmenttools/" title="Development Tools">Development Tools</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/compilers" title="Compilers">Compilers</a> </li>
+                            <li><a href="http://www.microchip.com/emulators/" title="Emulators">Emulators</a> </li>
+                            <li><a href="http://www.microchip.com/mplabide/" title="MPLAB X IDE">MPLAB<sup>®</sup> X IDE</a> </li>
+                            <li><a href="http://www.microchip.com/programmers/" title="Programmers">Programmers</a> </li>
+                        </ul>
+                        <a href="http://www.microchip.com/interface/" title="Interface">Interface</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/can/" title="CAN">CAN</a></li>
+                            <li><a href="http://www.microchip.com/ethernetproducts/" title="Ethernet">Ethernet</a> </li>
+                            <li><a href="http://www.microchip.com/infrared/" title="Infrared">Infrared</a></li>
+                            <li><a href="http://www.microchip.com/linproducts/" title="LIN">LIN</a></li>
+                            <li><a href="http://www.microchip.com/serialperipherals/" title="Serial Peripherals">Serial Peripherals</a></li>
+                            <li><a href="http://www.microchip.com/usbproducts/" title="USB">USB</a></li>
+                        </ul>
+                        <a href="http://www.microchip.com/legacy8051/" title="Legacy 8051/80C51 MCUs">Legacy 8051/80C51 MCUs</a>
+                        <a href="http://www.microchip.com/memory/" title="Memory - Serial EEPROMS Devices">Memory</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/serialeeprom/" title="Serial EEPROM">Serial EEPROM</a></li>
+                            <li><a href="http://www.microchip.com/serialsram/" title="Serial SRAM">Serial SRAM</a></li>
+                            <li><a href="http://www.microchip.com/serialflash/" title="Serial Flash">Serial Flash</a></li>
+                            <li><a href="http://www.microchip.com/parallelflash/" title="Parallel Flash">Parallel Flash</a></li>
+                        </ul>
+                    </li>
+                    <li class="column">
+                        
+                        <a href="http://www.microchip.com/motordrivers/" title="Motor Drivers">Motor Drivers</a>
+                        <a href="http://www.microchip.com/pcsystems/" title="PC Systems &amp; I/O Controllers">PC Systems &amp; I/O Controllers</a> 
+                        <a href="http://www.microchip.com/powermanagement/" title="Power Management">Power Management</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/batterymanagement/" title="Battery Management">Battery Management</a> </li>
+                            <li><a href="http://www.microchip.com/chargepumps/" title="Charge Pumps">Charge Pumps</a></li>
+                            <li><a href="http://www.microchip.com/systemsupervisors/" title="CPU/System Supervisors">CPU/System Supervisors</a></li>
+                            <li><a href="http://www.microchip.com/ldoregulators/" title="LDO Regulators">LDO Regulators</a></li>
+                            <li><a href="http://www.microchip.com/mosfetdrivers/" title="Power MOSFET Drivers">Power MOSFET Drivers</a> </li>
+                            <li><a href="http://www.microchip.com/mosfets/" title="Power MOSFETs">Power MOSFETs</a> </li>
+                            <li><a href="http://www.microchip.com/hybridpwmcontrollers/" title="Hybrid PWM Controllers">Hybrid PWM Controllers</a></li>
+                            <li><a href="http://www.microchip.com/pwmcontrollers/" title="PWM Controllers">PWM Controllers</a></li>
+                            <li><a href="http://www.microchip.com/switchingregulators/" title="Switching Regulators">Switching Regulators</a></li>
+                            <li><a href="http://www.microchip.com/voltagedetectors/" title="Voltage Detectors">Voltage Detectors</a></li>
+                        </ul>
+                        <a href="http://www.microchip.com/realtimeclock/" title="Real-Time Clock">Real-Time Clock</a>
+                    <a href="http://www.microchip.com/safety/" title="Safety &amp; Security">Safety and Security</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/horndrivers/" title="Horn Drivers">Horn Drivers</a> </li>
+                            <li><a href="http://www.microchip.com/safety/" title="Smoke &amp; CO">Smoke and CO</a> </li>
+                            
+                        </ul>
+                    </li>
+                    <li class="column">
+                    
+                        
+                        <a href="http://www.microchip.com/thermal/" title="Thermal Management">Thermal Management</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/temp/" title="Temperature Sensors">Temperature Sensors</a> </li>
+                            <li><a href="http://www.microchip.com/fancontrol/" title="Brushless DC Fan Controllers">Brushless DC Fan Controllers</a></li>
+                            
+                        </ul>
+                        <a href="http://www.microchip.com/touchandinputsensing/" title="Touch and Input Sensing">Touch and Input Sensing</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/proximitykeysandslidersproducts/" title="Proximity Keys and Sliders">Proximity, Keys and Sliders</a></li>
+                            <li><a href="http://www.microchip.com/touchscreensandtouchpadsproducts/" title="Touch Screens and Touch Pads">Touch Screens and Touch Pads</a></li>
+                            <li><a href="http://www.microchip.com/gesticproducts/" title="3D Tracking and Gesture Sensing">3D Tracking and Gesture Sensing</a></li>
+                            
+                        </ul>
+                        
+                        <a href="http://www.microchip.com/wirelessaudio/" title="Wireless Audio">Wireless Audio</a>
+                        <a href="http://www.microchip.com/wirelesssolutions/" title="Wireless">Wireless</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/infrared/" title="Infrared">Infrared</a></li>
+                            <li><a href="http://www.microchip.com/poweramplifiers/" title="Power Amplifiers">Power Amplifiers</a></li>
+                            <li><a href="http://www.microchip.com/radiofrequency/" title="Radio Frequency">Radio Frequency</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="dynamiccontent">
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/productselectiontool/" title="Product Selection Tools">Product Selection Tool</a>
+                        </div>
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/masters/" title="MASTERs Conference">MASTERs Conference</a>
+                        </div>
+                        
+                        
+                    </li>
+                </ul>
+            </li>
+            <!-- ==================== Applications Menu ======================== -->
+            <li id="menu-applications">
+                <a href="http://www.microchip.com/application/" title="Applications">Applications</a>
+                <ul id="menu-applications-section" class="section">
+                    <li class="column">
+                        <a href="http://www.microchip.com/audio/" title="Audio &amp; Speech">Audio &amp; Speech</a>
+                         
+                        <a href="http://www.microchip.com/automotive/" title="Automotive">Automotive</a>
+                        <!--
+                        <ul>
+                            <li><a href="http://www.smsc.com/index.php?tid=44" target="_blank" title="Automotive - SMSC">Automotive (SMSC)</a></li>
+                        </ul>
+                        --> 
+                        <a href="http://www.microchip.com/battery/" title="Battery Management">Battery Management</a>
+                        <a href="http://www.microchip.com/can/" title="CAN">CAN</a>
+                        <!--
+                        <a href="http://www.smsc.com/index.php?tid=43" target="_blank" title="Computers - SMSC">Computers (SMSC)</a> 
+                        <a href="http://www.smsc.com/index.php?tid=46" target="_blank" title="Digital Entertainment Units - SMSC">Digital Entertainment Units (SMSC)</a>
+                        -->
+                        <span>Displays</span>
+                        <ul>
+                            <li><a href="http://www.microchip.com/graphics/" title="Graphical Displays">Graphical Displays</a></li>
+                            <li><a href="http://www.microchip.com/lcd/" title="Segmented LCD">Segmented LCD</a> </li>
+                        </ul>
+                        <a href="http://www.microchip.com/security/" title="Embedded Security">Embedded Security</a> 
+                        <a href="http://www.microchip.com/ethernet/" title="Ethernet">Ethernet</a>
+                        
+                         
+                        
+                    </li>
+                    <li class="column">
+                        <a href="http://www.microchip.com/hightemp/" title="High Temperature">High Temperature</a>
+                        <a href="http://www.microchip.com/homeappliance/" title="Home Appliance">Home Appliance</a>
+                        <a href="http://www.microchip.com/intelligentpower/" title="Intelligent Power">Intelligent Power</a>
+                        <a href="http://www.microchip.com/lighting/" title="Lighting">Lighting</a> 
+                        <a href="http://www.microchip.com/lin/" title="LIN">LIN</a>
+                        <a href="http://www.microchip.com/xlp/" title="Low Power">Low Power</a> 
+                        <a href="http://www.microchip.com/medical/" title="Medical">Medical</a> 
+                        <a href="http://www.microchip.com/metering" title="Metering">Metering</a> 
+                        
+                        
+                          
+                    </li>
+                    <li class="column">
+                    <a href="http://www.microchip.com/motorcontrol/" title="Motor Control &amp; Drive">Motor Control &amp; Drive</a>
+                        <!--
+                        <a href="http://www.smsc.com/index.php?tid=131" target="_blank" title="Industrial & Embedded Systems - SMSC">Industrial &amp; Embedded Systems (SMSC)</a>
+                        <a href="http://www.smsc.com/index.php?tid=45" target="_blank" title="Portable Consumer Electronics - SMSC">Portable Consumer Electronics (SMSC)</a>
+                        -->
+                       
+                        <a href="http://www.microchip.com/powermonitoring/" title="Power Monitoring">Power Monitoring</a>
+                        <!--<a href="http://www.smsc.com/index.php?tid=47" target="_blank" title="Printing & Other Consumer Electronics - SMSC">Printing &amp; Other Consumer Electronics (SMSC)</a>-->
+                        <a href="http://www.microchip.com/smartenergy/" title="Smart Energy">Smart Energy</a>
+                        <a href="http://www.microchip.com/smartphone/" title="Smartphone Accessories">Smartphone Accessories</a> 
+                        <a href="http://www.microchip.com/touchandinputsensing/" title="Touch and Input Sensing">Touch and Input Sensing</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/proximitykeysandsliders/" title="Proximity Keys and Sliders">Proximity, Keys and Sliders</a></li>
+                            <li><a href="http://www.microchip.com/touchscreensandtouchpads/" title="Touch Screens and Touch Pads">Touch Screens and Touch Pads</a></li>
+                            <li><a href="http://www.microchip.com/gestic/" title="3D Tracking and Gesture Sensing">3D Tracking and Gesture Sensing</a></li>
+                        </ul>
+                    </li>
+                    <li class="column">
+                        
+                        <a href="http://www.microchip.com/usb/" title="USB">USB</a>
+                        <a href="http://www.microchip.com/wirelessaudio/" title="Wireless Audio">Wireless Audio</a>
+                        
+                        <a href="http://www.microchip.com/wireless/" title="Wireless Connectivity">Wireless Connectivity</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/bluetooth/" title="Bluetooth">Bluetooth</a></li>
+                            <li><a href="http://www.microchip.com/infrared/" title="Infrared">Infrared</a></li>
+                            <li><a href="http://www.microchip.com/miwi/" title="MiWi">MiWi<sup>™</sup></a></li>
+                            <li><a href="http://www.microchip.com/wifi/" title="WiFi">WiFi<sup>®</sup></a></li>
+                            <li><a href="http://www.microchip.com/zigbee/" title="ZigBee">ZigBee<sup>®</sup></a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="dynamiccontent">
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/productselectiontool/" title="Product Selection Tools">Product Selection Tool</a>
+                        </div>
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/masters/" title="MASTERs Conference">MASTERs Conference</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!-- ==================== Design Support Menu ======================== -->
+            <li id="menu-design">
+                <a href="http://www.microchip.com/designsupport/" title="Design Support">Design Support</a>
+                <ul id="menu-design-section" class="section">
+                    <li class="column">
+                        <a href="http://www.microchip.com/documentation/" title="Documentation">Documentation</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/applicationnotes/" title="Application Notes">Application Notes</a></li>
+                            <li><a href="http://www.microchip.com/datasheets/" title="Data Sheets">Data Sheets</a></li>
+                            <li><a href="http://www.microchip.com/errata/" title="Errata">Errata</a></li>
+                            <li><a href="http://www.microchip.com/packaging/" title="Packaging Specifications">Packaging Specifications</a></li>
+                            <li><a href="http://www.microchip.com/programmingspecs/" title="Programming Specifications">Programming Specifications</a></li>
+                            <li><a href="http://www.microchip.com/referencemanuals/" title="Reference Manuals">Reference Manuals</a></li>
+                            <li><a href="http://www.microchip.com/userguides/" title="User Guides">User Guides</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="column">
+                        <a href="http://www.microchip.com/developmenttools/" title="Development Tools">Development Tools</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/compilers/" title="Compilers">Compilers</a></li>
+                            <li><a href="http://www.microchip.com/emulators/" title="Emulators">Emulators</a></li>
+                            <li><a href="http://www.microchip.com/mplabx/" title="MPLAB X IDE">MPLAB<sup>®</sup> X IDE</a> </li>
+                            <li><a href="http://www.microchip.com/programmers/" title="Programmers">Programmers</a></li>
+                            <li><a href="http://www.microchip.com/thirdpartytools/" title="Third Party Tools">3rd Party Dev Tools</a></li>
+                        </ul>
+                        
+                    </li>
+                    <li class="column">
+                        <span>Software</span>
+                        <ul>
+                            <li><a href="http://www.microchip.com/libraries/" title="Software Libraries">Software Libraries</a></li>
+                            <li><a href="http://www.microchip.com/codeexamples/" title="Code Examples">Code Examples</a></li>
+                            <li><a href="http://embeddedcodesource.com/" title="Embedded Code Source">Embedded Code Source</a></li>
+                        </ul>
+                        <span>Design &amp; Simulation Tools</span>
+                        <ul>
+                            <li><a href="http://www.microchip.com/cad/" title="CAD/CAE Symbols">CAD/CAE Symbols</a></li>
+                            <li><a href="http://www.microchip.com/spicemodels/" title="SPICE Models">SPICE Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="column">
+                        <a href="http://www.microchip.com/techsupport/" title="24/7 Tech Support">Technical Support</a>
+                        <a href="http://www.microchip.com/quality/" title="Quality &amp; Reliability">Quality &amp; Reliability</a>
+                        <a href="http://www.microchip.com/forum/" title="Forums">Forums</a>
+                        <a href="http://www.microchip.com/partners/" title="Design Partner Network">Design Partner Network</a>
+                        <a href="http://www.microchip.com/pcn/" title="Product Change Notification">Product Change Notification</a>
+                        <a href="http://www.microchip.com/events/" title="Conferences &amp; Events">Conferences &amp; Events</a>
+                        <a href="http://www.microchip.com/academic/" title="Academic Program">Academic Program</a> 
+                    </li>
+                    <li class="dynamiccontent">
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/productselectiontool/" title="Product Selection Tools">Product Selection Tool</a>
+                        </div>
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/masters/" title="MASTERs Conference">MASTERs Conference</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!-- ==================== Training Menu ======================== -->
+            <li id="menu-training">
+                <a href="http://www.microchip.com/training/" title="Training">Training</a>
+                <ul id="menu-training-section" class="section">
+                    <li class="column">
+                        <a href="http://www.microchip.com/training/" title="Training">Training</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/webinars/" title="Webinars">Webinars</a> </li>
+                            <li><a href="http://www.microchip.com/videos/" title="Microchip Videos">Microchip Videos</a></li>
+                            <li><a href="http://www.microchip.com/masters/" title="MASTERs Conference">MASTERs Conference</a></li>
+                            <li><a href="http://www.microchip.com/rtc/" title="Technical Training Centers">Technical Training Centers</a></li>
+                            <li><a href="http://www.microchip.com/2012seminars/" title="Technical Training Seminars">Technical Training Seminars</a></li>
+                        </ul>
+                        <a href="http://www.microchip.com/events/" title="Conferences &amp; Events">Conferences &amp; Events</a>
+                        <a href="http://www.microchip.com/academic/" title="Academic Program">Academic Program</a>
+                    </li>
+                    
+                    <li class="dynamiccontent">
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/productselectiontool/" title="Product Selection Tools">Product Selection Tool</a>
+                        </div>
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/masters/" title="MASTERs Conference">MASTERs Conference</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <!-- ==================== Sample & Buy Menu ======================== -->
+            <li id="menu-buysample">
+                <a href="http://www.microchipdirect.com/" title="Sample &amp; Buy">Sample &amp; Buy</a>
+                <ul id="menu-buysample-section" class="section">
+                    <li class="column">
+                         
+                        <a href="http://www.microchip.com/sales/" name="menuGlobalSalesampDistribution" title="Global Sales &amp; Distribution">Global Sales &amp; Distribution</a> 
+                        <a href="http://www.microchipdirect.com/" title="microchipDIRECT">MicrochipDIRECT</a>
+
+                        <ul>
+                            <li> <a href="http://www.microchipdirect.com/" title="Online Store">Online Store</a></li>
+                            <li><a href="http://www.microchipdirect.com/programming/Login.aspx?ReturnUrl=UploadPart.aspx" title="Programming Center">Programming Center</a></li>
+                        </ul>
+                        <a href="http://www.microchip.com/sample/" title="Samples">Samples</a>
+                    </li>
+                    <li class="dynamiccontent">
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/productselectiontool/" title="Product Selection Tools">Product Selection Tool</a>
+                        </div>
+                        <div class="blueflag">
+                                <a href="http://www.microchip.com/masters/" title="MASTERs Conference">MASTERs Conference</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+             <!-- ==================== About Us Menu ======================== -->
+            <li id="menu-aboutus"><a href="http://www.microchip.com/aboutus/" title="About Us">About Us</a>
+                <ul id="menu-aboutus-section" class="section">
+                    <li class="column">
+                        <a href="http://www.microchip.com/company/" title="Company Information">Company Information</a> 
+                        <a href="http://www.microchip.com/corporateresponsibility/" title="Corporate Responsibility">Corporate Responsibility</a> 
+                        <a href="http://www.microchip.com/careers/" title="Careers">Careers</a> 
+                        <a href="http://www.microchip.com/contactus/" title="Contact Us">Contact Us</a> 
+                        <a href="http://www.microchip.com/environment/" title="Environmental Health &amp; Safety">Environmental Health and Safety</a> 
+                        <a href="http://www.microchip.com/investors/" title="Investor Relations">Investor Relations</a>
+                        <a href="http://www.microchip.com/leadership/" title="Leadership">Leadership</a> 
+                        <a href="http://www.microchip.com/legal/" title="Legal Information">Legal Information</a> 
+                        <a href="http://www.microchip.com/mediacenter/" title="Media Center">Media Center</a>
+                        <ul>
+                            <li><a href="http://www.microchip.com/newsevents/" title="News &amp; Events">News &amp; Events</a></li>
+                            <li><a href="http://www.microchip.com/press/" title="Press Release">Press Release</a></li>
+                            <li><a href="http://www.microchip.com/videos/" title="Microchip Videos">Microchip Videos</a></li>
+                        </ul>
+                        <a href="http://www.microchip.com/microsolutions/" title="MicroSolutions eNewsletter">MicroSolutions eNewsletter</a> 
+                    </li>    
+                </ul>
+            </li>
+            <!-- ==================== Contact Us Menu ======================== -->
+            <li id="contactus">
+                <a href="http://www.microchip.com/contactus/" title="Contact Us">Contact Us</a>
+                
+            </li>
+            <!-- ==================== myMicrochip Menu ======================== -->
+            <li id="mymicrochip">
+                <a href="http://www.microchip.com/myMicrochip/" title="myMicrochip Login"><span class="my">my</span>Microchip Login</a>
+            </li>
+        </ul>
+       
+    </div>
+</div>
+    <!-- ==================== End Header ========================== -->
+    <div id="container" class="clearfix">
+        <!-- ==================== Begin Wrapper ======================= -->
+        <div id="wrapper" class="clearfix">
+            <div id="maincol">
+                
+    <form name="aspnetForm" method="post" action="./PIC16F1826 - PIC® Microcontrollers_files/PIC16F1826 - PIC® Microcontrollers.html" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEwNDI4NzExMjUPZBYCZg9kFgICAQ9kFgICAQ9kFjgCBA8PFgIeB1Zpc2libGVnZGQCBQ8PFgIeBFRleHQFClBJQzE2RjE4MjZkZAIGDw8WBB8BBQ1JbiBQcm9kdWN0aW9uHgdUb29sVGlwBQ1JbiBQcm9kdWN0aW9uZGQCBw8PFgQeC05hdmlnYXRlVXJsBUVodHRwOi8vd3d3Lm1pY3JvY2hpcGRpcmVjdC5jb20vUHJvZHVjdFNlYXJjaC5hc3B4P0tleXdvcmRzPVBJQzE2RjE4MjYeBlRhcmdldAUJTWljcm9jaGlwZGQCCA8PFgIfAwXVAW1haWx0bzo/c3ViamVjdD1NaWNyb2NoaXAlMjBUZWNobm9sb2d5JTIwRGV2aWNlJTIwSW5mb3JtYXRpb24mYm9keT1IZXJlJTIwaXMlMjB0aGUlMjBsaW5rJTIwdG8lMjB0aGUlMjBNaWNyb2NoaXAlMjBUZWNobm9sb2d5JTIwd2Vic2l0ZSUyMGZvciUyMGRldmljZTogUElDMTZGMTgyNiUwQSUwQS93d3dwcm9kdWN0cy9EZXZpY2VzLmFzcHg/ZERvY05hbWU9UElDMTZGMTgyNmRkAgkPDxYCHwMFdmphdmFzY3JpcHQ6dm9pZChMYXVuY2hJbkNlbnRlcignRGV2aWNlc1ByaW50ZXJWZXJzaW9uLmFzcHg/ZERvY05hbWU9ZW41Mzg5NjQmbGFuZz1lbicsNTAwLDUwMCwnbG9jYXRpb249MCxzdGF0dXM9MCcpKTtkZAINDw8WAh8BBR1UaGUgTG93IFBvd2VyIEFuYWxvZyBTb2x1dGlvbmRkAg4PZBYEAgEPDxYCHwEFBkFjdGl2ZWRkAgMPDxYCHwEFFTEyLzE1LzIwMDggNToyMDowMCBQTWRkAhAPZBYCZg8PFgIfAQUYRG9jdW1lbnRhdGlvbiAmIFNvZnR3YXJlZGQCEQ9kFgJmDw8WAh8BBRFQcmljaW5nICYgU2FtcGxlc2RkAhIPZBYCZg8PFgIfAQURRGV2ZWxvcG1lbnQgVG9vbHNkZAITD2QWAmYPDxYCHwEFEVJvSFMgIEluZm9ybWF0aW9uZGQCFQ8WAh4LXyFJdGVtQ291bnQCDhYcZg9kFgJmDxUDS2h0dHA6Ly9zdXBwb3J0Lm1pY3JvY2hpcC5jb20vc2NyaXB0cy9zbHh3ZWIuZGxsL2V4dGVybmFsP25hbWU9d2VidGlja2V0Y3VzdAARMjQvNyBUZWNoIFN1cHBvcnRkAgEPZBYCZg8VAzMvc3RlbGxlbnQvaWRjcGxnP0lkY1NlcnZpY2U9U1NfR0VUX1BBR0Umbm9kZUlkPTE0MTEFX3NlbGYuQXBwbGljYXRpb24gTWFlc3RybyA8c3VwPiYjMTUzOzwvc3VwPiBTb2Z0d2FyZWQCAg9kFgJmDxUDMy9zdGVsbGVudC9pZGNwbGc/SWRjU2VydmljZT1TU19HRVRfUEFHRSZub2RlSWQ9MTQwOAVfc2VsZg1Db2RlIEV4YW1wbGVzZAIDD2QWAmYPFQMzL3N0ZWxsZW50L2lkY3BsZz9JZGNTZXJ2aWNlPVNTX0dFVF9QQUdFJm5vZGVJZD0xNDA5BV9zZWxmDkNvZGUgVGVtcGxhdGVzZAIED2QWAmYPFQMyL3N0ZWxsZW50L2lkY3BsZz9JZGNTZXJ2aWNlPVNTX0dFVF9QQUdFJm5vZGVJZD02NzYGX1BvcFVwEUNvbnRhY3QgTWljcm9jaGlwZAIFD2QWAmYPFQMxL3N0ZWxsZW50L2lkY3BsZz9JZGNTZXJ2aWNlPVNTX0dFVF9QQUdFJm5vZGVJZD03MAVfc2VsZhJEZXNpZ24gQ2VudGVyIEhvbWVkAgYPZBYCZg8VAzMvc3RlbGxlbnQvaWRjcGxnP0lkY1NlcnZpY2U9U1NfR0VUX1BBR0Umbm9kZUlkPTE0MTAFX3NlbGYQRmlybXdhcmUgRHJpdmVyc2QCBw9kFgJmDxUDGmh0dHA6Ly9mb3J1bS5taWNyb2NoaXAuY29tBV9zZWxmGE9ubGluZSBEaXNjdXNzaW9uIEdyb3Vwc2QCCA9kFgJmDxUDMS9zdGVsbGVudC9pZGNwbGc/SWRjU2VydmljZT1TU19HRVRfUEFHRSZub2RlSWQ9ODYFX3NlbGYQUHJvZ3JhbW1pbmcgSG9tZWQCCQ9kFgJmDxUDMy9zdGVsbGVudC9pZGNwbGc/SWRjU2VydmljZT1TU19HRVRfUEFHRSZub2RlSWQ9MTQwNwVfc2VsZhpQcm9ncmFtbWluZyBTcGVjaWZpY2F0aW9uc2QCCg9kFgJmDxUDK2h0dHBzOi8vc2VjdXJlLm1pY3JvY2hpcC5jb20vUlRDL2luZGV4LmFzcHgAGVJlZ2lvbmFsIFRyYWluaW5nIENlbnRlcnNkAgsPZBYCZg8VAxdodHRwOi8vY24ubWljcm9jaGlwLmNvbQVfc2VsZi9TaWduIHVwIHRvIHJlY2VpdmUgcHJvZHVjdCBjaGFuZ2Ugbm90aWZpY2F0aW9uc2QCDA9kFgJmDxUDMy9zdGVsbGVudC9pZGNwbGc/SWRjU2VydmljZT1TU19HRVRfUEFHRSZub2RlSWQ9MTkyNgVfc2VsZjJUaGlyZCBQYXJ0eSBEZXZlbG9wbWVudCBUb29scyBhbmQgRGVzaWduIFJlc291cmNlc2QCDQ9kFgJmDxUDNGh0dHA6Ly90ZWNodHJhaW4ubWljcm9jaGlwLmNvbS93ZWJzZW1pbmFycy9NYWluLmFzcHgFX3NlbGYIV2ViaW5hcnNkAhYPDxYIHwMFOmh0dHA6Ly93dzEubWljcm9jaGlwLmNvbS9kb3dubG9hZHMvZW4vRGV2aWNlRG9jLzQxMzkxRC5wZGYfAgUiRG93bmxvYWQgRGF0YVNoZWV0IGZvciBQSUMxNkYxODI2Lh4ISW1hZ2VVcmwFFi9faW1hZ2VzL2ljb25zL3BkZi5wbmcfAGdkZAIXDw8WBh8BBUZQSUMxNihMKUYxODI2LzI3IDE4LzIwLzI4LVBpbiBGbGFzaCBNQ1Ugd2l0aCBuYW5vV2F0dCBYTFAgKDA0LzI5LzIwMTEpHwMFOmh0dHA6Ly93dzEubWljcm9jaGlwLmNvbS9kb3dubG9hZHMvZW4vRGV2aWNlRG9jLzQxMzkxRC5wZGYfAGdkZAIZDw8WAh8AaGQWBAIBDw8WAh8AaGRkAgMPDxYCHwBoZGQCGg8PFgIfAQUIRmVhdHVyZXNkZAIbDw8WAh8BBc0IPHRkICA+PHVsPjx1bD4gICAgICAgIDxsaT5FbmhhbmNlZCBNaWQtcmFuZ2UgQ29yZSB3aXRoIDQ5IEluc3RydWN0aW9uLCAxNiBTdGFjayBMZXZlbHM8L2xpPiAgICAgICAgPGxpPkZsYXNoIFByb2dyYW0gTWVtb3J5IHdpdGggc2VsZiByZWFkL3dyaXRlIGNhcGFiaWxpdHk8L2xpPiAgICAgICAgPGxpPkludGVybmFsIDMyTUh6IG9zY2lsbGF0b3I8L2xpPiAgICAgICAgPGxpPkludGVncmF0ZWQgQ2FwYWNpdGl2ZSBtVG91Y2ggU2Vuc2luZyBNb2R1bGU8L2xpPiAgICAgICAgPGxpPkRhdGEgU2lnbmFsIE1vZHVsYXRvciBNb2R1bGU8L2xpPiAgICAgICAgPGxpPk1JMkMsIFNQSSwgRVVTQVJUIHcvYXV0byBiYXVkPC9saT4gICAgICAgIDxsaT5FQ0NQIChFbmhhbmNlZC9DYXB0dXJlIENvbXBhcmUgUFdNKTwvbGk+ICAgICAgICA8bGk+Q29tcGFyYXRvcnMgd2l0aCBzZWxlY3RhYmxlIFZvbHRhZ2UgUmVmZXJlbmNlPC9saT4gICAgICAgIDxsaT4xMiBDaGFubmVsIDEwYiBBREMgd2l0aCBWb2x0YWdlIFJlZmVyZW5jZTwvbGk+ICAgICAgICA8bGk+MjVtQSBTb3VyY2UvU2luayBjdXJyZW50IEkvTzwvbGk+ICAgICAgICA8bGk+Rm91ciA4LWJpdCBUaW1lcnMgKFRNUjAvVE1SMi9UTVI0L1RNUjYpPC9saT4gICAgICAgIDxsaT5PbmUgMTYtYml0IFRpbWVyIChUTVIxKTwvbGk+ICAgICAgICA8bGk+RXh0ZW5kZWQgV2F0Y2hkb2cgVGltZXIgKEVXRFQpPC9saT4gICAgICAgIDxsaT5FbmhhbmNlZCBQb3dlci1Pbi9PZmYtUmVzZXQ8L2xpPiAgICAgICAgPGxpPkJyb3duLU91dCBSZXNldCAoQk9SKTwvbGk+ICAgICAgICA8bGk+SW4gQ2lyY3VpdCBTZXJpYWwgUHJvZ3JhbW1pbmcgKElDU1ApPC9saT4gICAgICAgIDxsaT5PbiBCb2FyZCBJbi1DaXJjdWl0IERlYnVnPC9saT4gICAgICAgIDxsaT5XaWRlIE9wZXJhdGluZyBWb2x0YWdlICgxLjhWIOKAkyA1LjVWKTwvbGk+ICAgICAgICA8bGk+TG93IFBvd2VyIFBJQzE2TEYxODJ4IHZhcmlhbnRzICgxLjhWIOKAkyAzLjZWKTwvbGk+ICAgICAgICA8bGk+U3RhbmRieSBDdXJyZW50IChQSUMxNkxGMTgyWCk6IDMwIG5BIEAgMS44ViwgdHlwaWNhbDwvbGk+ICAgIDwvdWw+PC9saT48L3VsPjwvdGQ+ZGQCHA9kFgICAQ8WAh8BBf8IPHRhYmxlIGNsYXNzPSdib3JkZXInPjx0ciBjbGFzcz0ndGFibGVoZWFkZXInPjx0ZD4mbmJzcDtQYXJhbWV0ZXIgTmFtZTwvdGQ+PHRkPiZuYnNwO1ZhbHVlPC90ZD48L3RyPjx0ciBjbGFzcz0ncm93aXRlbSc+PHRkPlByb2dyYW0gTWVtb3J5IFR5cGU8L3RkPjx0ZD5GbGFzaDwvdGQ+PC90cj48dHIgY2xhc3M9J3Jvd2FsdGl0ZW0nPjx0ZD5Qcm9ncmFtIE1lbW9yeSAoS0IpPC90ZD48dGQ+My41PC90ZD48L3RyPjx0ciBjbGFzcz0ncm93aXRlbSc+PHRkPkNQVSBTcGVlZCAoTUlQUyk8L3RkPjx0ZD44PC90ZD48L3RyPjx0ciBjbGFzcz0ncm93YWx0aXRlbSc+PHRkPlJBTSBCeXRlczwvdGQ+PHRkPjI1NjwvdGQ+PC90cj48dHIgY2xhc3M9J3Jvd2l0ZW0nPjx0ZD5EYXRhIEVFUFJPTSAoYnl0ZXMpPC90ZD48dGQ+MjU2PC90ZD48L3RyPjx0ciBjbGFzcz0ncm93YWx0aXRlbSc+PHRkPkRpZ2l0YWwgQ29tbXVuaWNhdGlvbiBQZXJpcGhlcmFsczwvdGQ+PHRkPjEtVUFSVCwgMS1BL0UvVVNBUlQsIDEtU1BJLCAxLUkyQzEtTVNTUChTUEkvSTJDKTwvdGQ+PC90cj48dHIgY2xhc3M9J3Jvd2l0ZW0nPjx0ZD5DYXB0dXJlL0NvbXBhcmUvUFdNIFBlcmlwaGVyYWxzPC90ZD48dGQ+MSBFQ0NQIC88L3RkPjwvdHI+PHRyIGNsYXNzPSdyb3dhbHRpdGVtJz48dGQ+VGltZXJzPC90ZD48dGQ+MiB4IDgtYml0LCAxIHggMTYtYml0PC90ZD48L3RyPjx0ciBjbGFzcz0ncm93aXRlbSc+PHRkPkFEQzwvdGQ+PHRkPjEyIGNoLCAxMC1iaXQ8L3RkPjwvdHI+PHRyIGNsYXNzPSdyb3dhbHRpdGVtJz48dGQ+Q29tcGFyYXRvcnM8L3RkPjx0ZD4yPC90ZD48L3RyPjx0ciBjbGFzcz0ncm93aXRlbSc+PHRkPlRlbXBlcmF0dXJlIFJhbmdlIChDKTwvdGQ+PHRkPi00MCB0byAxMjU8L3RkPjwvdHI+PHRyIGNsYXNzPSdyb3dhbHRpdGVtJz48dGQ+T3BlcmF0aW5nIFZvbHRhZ2UgUmFuZ2UgKFYpPC90ZD48dGQ+MS44IHRvIDUuNTwvdGQ+PC90cj48dHIgY2xhc3M9J3Jvd2l0ZW0nPjx0ZD5QaW4gQ291bnQ8L3RkPjx0ZD4xODwvdGQ+PC90cj48dHIgY2xhc3M9J3Jvd2FsdGl0ZW0nPjx0ZD5YTFA8L3RkPjx0ZD5ZZXM8L3RkPjwvdHI+PHRyIGNsYXNzPSdyb3dpdGVtJz48dGQ+Q2FwIFRvdWNoIENoYW5uZWxzPC90ZD48dGQ+MTI8L3RkPjwvdHI+PC90YWJsZT5kAh0PDxYCHwEFGERvY3VtZW50YXRpb24gJiBTb2Z0d2FyZWRkAh4PDxYCHwEFC0JhY2sgVG8gVG9wZGQCHw9kFgYCAQ8PFgIfAGhkZAIDDw8WAh8AaGRkAgcPDxYCHwEFKk5vIHJlY29yZHMgZm91bmQuIFBsZWFzZSBjaGVjayBiYWNrIGxhdGVyLmRkAiAPDxYCHwEFEVByaWNpbmcgJiBTYW1wbGVzZGQCIQ8PFgIfAQULQmFjayBUbyBUb3BkZAIjDw8WAh8BBRFEZXZlbG9wbWVudCBUb29sc2RkAiQPDxYCHwEFC0JhY2sgVG8gVG9wZGQCJg8PFgIfAQURUm9IUyAgSW5mb3JtYXRpb25kZAInDw8WAh8BBQtCYWNrIFRvIFRvcGRkZDKvt67OKQttgxjblbrKJL8ygqRO">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div>
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWEAK7vJKcAgLC/tbWDAL65++UCALIxrH8CQLV6pioCAKljqW8AQLZuoHCCgLZuu3mAQLZutmLCQLZusUwAtm6sdUHAtm6iZ8GAtm69cMNAtm64egEAtm6zY0MAvSjn9cEbLafP77Hc9RRrDiy93eiqxgC548=">
+</div>
+    <br>
+    <div id="NavigationSection" class="clearfix half-prepend-top" style="display: none">
+        <div class="breadcrumbs">
+            <!-- Begin breadcrumb replacement -->
+            <ul>
+                <li>
+                    <a id="ctl00_cphContainer_hypBreadCrumb1" class="BreadCrumbPlain" href="http://www.microchip.com/" target="_parent"><span id="ctl00_cphContainer_lblBreadCrumb1">Home</span></a>
+                </li>
+                <li>
+                    <a id="ctl00_cphContainer_hypBreadCrumb2" class="BreadCrumbPlain" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=69" target="_parent"><span id="ctl00_cphContainer_lblBreadCrumb2">Products</span></a>
+                </li>
+                <li>
+                    <a id="ctl00_cphContainer_hypBreadCrumb3" class="BreadCrumbPlain" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=69" target="_parent"><span id="ctl00_cphContainer_lblBreadCrumb3"></span></a>
+                </li>
+                <li>
+                    
+                </li>
+            </ul>
+            <!-- End breadcrumb replacement -->
+        </div>
+    </div>
+    <div class="TitleSection clear clearfix">
+        
+        <!--Device Family Name -->
+        <img id="ctl00_cphContainer_imgXLP" class="left half-append-right" src="./PIC16F1826 - PIC® Microcontrollers_files/XLP-icon.gif" alt="nanoWatt XLP" style="border-width:0px;">
+        <!--Device Family Name -->
+        <h1 class="left top ">
+            <span id="ctl00_cphContainer_lblDevice">PIC16F1826</span></h1>
+        <!--STATUS -->
+        <h3 class="left half-prepend-left">
+            <span id="ctl00_cphContainer_lblStatusName" title="In Production" class="status" style="cursor: hand">In Production</span></h3>
+        <a id="ctl00_cphContainer_hypLnkBuyNow" class="greenbutton prepend-left" href="http://www.microchipdirect.com/ProductSearch.aspx?Keywords=PIC16F1826" target="Microchip"><span>Buy it Now</span></a>
+        <div class="right posrelative">
+    
+            <a id="ctl00_cphContainer_hypEmailThis" href="mailto:?subject=Microchip%20Technology%20Device%20Information&body=Here%20is%20the%20link%20to%20the%20Microchip%20Technology%20website%20for%20device:%20PIC16F1826%0A%0A/wwwproducts/Devices.aspx?dDocName=PIC16F1826"><img id="ctl00_cphContainer_imgEmail" src="./PIC16F1826 - PIC® Microcontrollers_files/mail_icon.png" alt="Email this Page" align="bottom" style="border-width:0px;"></a>&nbsp;
+            <a id="ctl00_cphContainer_hypPrintPage" href="javascript:void(LaunchInCenter('DevicesPrinterVersion.aspx?dDocName=en538964&lang=en',500,500,'location=0,status=0'));"><img id="ctl00_cphContainer_imgPrint" src="./PIC16F1826 - PIC® Microcontrollers_files/print_icon.png" alt="Print this Page" align="bottom" style="border-width:0px;"></a>
+        </div>
+        <div class="right">
+            <input name="ctl00$cphContainer$hdnDeviceFamily" type="hidden" id="ctl00_cphContainer_hdnDeviceFamily" value="PIC16F1826">
+            <input name="ctl00$cphContainer$hidShow" type="hidden" id="ctl00_cphContainer_hidShow" value="[Show]">
+            <input name="ctl00$cphContainer$hidHide" type="hidden" id="ctl00_cphContainer_hidHide" value="[Hide]">
+            <i>
+                &nbsp;
+            </i>
+        </div>
+    </div>
+    
+    <div class="clearfix clear append-bottom">
+        
+        <a id="ctl00_cphContainer_hypDocumentationLink" class="button half-append-right" onclick="toggleSection(0);" href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964#documentation"><span id="ctl00_cphContainer_lblDocumentationLink">Documentation &amp; Software</span></a>
+        <a id="ctl00_cphContainer_hypPricingLink" class="button half-append-right" onclick="toggleSection(1);" href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964#pricindAndSamples"><span id="ctl00_cphContainer_lblPricingLink">Pricing &amp; Samples</span></a>
+        <a id="ctl00_cphContainer_hypDevToolsLink" class="button half-append-right" onclick="toggleSection(2);" href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964#developmentTools"><span id="ctl00_cphContainer_lblDevToolsLink">Development Tools</span></a>
+        
+        
+        <div id="Uc_TopNav1_C3_menu" class="right">
+            <ul class="quicklinks">
+                <li>
+                    Quick Links
+                    <ul>
+                        
+                                <li><a href="http://support.microchip.com/scripts/slxweb.dll/external?name=webticketcust" target="">
+                                    24/7 Tech Support</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1411" target="_self">
+                                    Application Maestro <sup>™</sup> Software</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1408" target="_self">
+                                    Code Examples</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1409" target="_self">
+                                    Code Templates</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=676" target="_PopUp">
+                                    Contact Microchip</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=70" target="_self">
+                                    Design Center Home</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1410" target="_self">
+                                    Firmware Drivers</a> </li>
+                            
+                                <li><a href="http://forum.microchip.com/" target="_self">
+                                    Online Discussion Groups</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=86" target="_self">
+                                    Programming Home</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1407" target="_self">
+                                    Programming Specifications</a> </li>
+                            
+                                <li><a href="https://secure.microchip.com/RTC/index.aspx" target="">
+                                    Regional Training Centers</a> </li>
+                            
+                                <li><a href="http://cn.microchip.com/" target="_self">
+                                    Sign up to receive product change notifications</a> </li>
+                            
+                                <li><a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1926" target="_self">
+                                    Third Party Development Tools and Design Resources</a> </li>
+                            
+                                <li><a href="http://techtrain.microchip.com/webseminars/Main.aspx" target="_self">
+                                    Webinars</a> </li>
+                            
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr class="dotted">
+    <div class="left half-append-bottom">
+        <a id="ctl00_cphContainer_hyplnkDataSheet" title="Download DataSheet for PIC16F1826." href="http://ww1.microchip.com/downloads/en/DeviceDoc/41391D.pdf" target="Microchip"><img title="Download DataSheet for PIC16F1826." src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" style="border-width:0px;"></a>
+        &nbsp;<a id="ctl00_cphContainer_lblDataSheet" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41391D.pdf" target="Microchip">PIC16(L)F1826/27 18/20/28-Pin Flash MCU with nanoWatt XLP (04/29/2011)</a>
+        
+    </div>
+    <div class="clear append-bottom clearfix">
+        
+    </div>
+    <div class="clear clearfix">
+        <div class="left append-right" style="width: 562px;">
+            <span id="ctl00_cphContainer_lblFeatures"></span><table class="border">
+                <tbody><tr class="tableheader">
+                    <td colspan="2">
+                        <span id="ctl00_cphContainer_lblFeaturesTitle">Features</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><ul><ul>        <li>Enhanced Mid-range Core with 49 Instruction, 16 Stack Levels</li>        <li>Flash Program Memory with self read/write capability</li>        <li>Internal 32MHz oscillator</li>        <li>Integrated Capacitive mTouch Sensing Module</li>        <li>Data Signal Modulator Module</li>        <li>MI2C, SPI, EUSART w/auto baud</li>        <li>ECCP (Enhanced/Capture Compare PWM)</li>        <li>Comparators with selectable Voltage Reference</li>        <li>12 Channel 10b ADC with Voltage Reference</li>        <li>25mA Source/Sink current I/O</li>        <li>Four 8-bit Timers (TMR0/TMR2/TMR4/TMR6)</li>        <li>One 16-bit Timer (TMR1)</li>        <li>Extended Watchdog Timer (EWDT)</li>        <li>Enhanced Power-On/Off-Reset</li>        <li>Brown-Out Reset (BOR)</li>        <li>In Circuit Serial Programming (ICSP)</li>        <li>On Board In-Circuit Debug</li>        <li>Wide Operating Voltage (1.8V – 5.5V)</li>        <li>Low Power PIC16LF182x variants (1.8V – 3.6V)</li>        <li>Standby Current (PIC16LF182X): 30 nA @ 1.8V, typical</li>    </ul></ul></td>
+                </tr>
+            </tbody></table>
+        </div>
+        <div class="left" style="width: 350px;">
+            <div id="ctl00_cphContainer_pnlParams">
+	
+                <!-- Content Begin -->
+                <div class="ParametersTable">
+                    <table class="border"><tbody><tr class="tableheader"><td>&nbsp;Parameter Name</td><td>&nbsp;Value</td></tr><tr class="rowitem"><td>Program Memory Type</td><td>Flash</td></tr><tr class="rowaltitem"><td>Program Memory (KB)</td><td>3.5</td></tr><tr class="rowitem"><td>CPU Speed (MIPS)</td><td>8</td></tr><tr class="rowaltitem"><td>RAM Bytes</td><td>256</td></tr><tr class="rowitem"><td>Data EEPROM (bytes)</td><td>256</td></tr><tr class="rowaltitem"><td>Digital Communication Peripherals</td><td>1-UART, 1-A/E/USART, 1-SPI, 1-I2C1-MSSP(SPI/I2C)</td></tr><tr class="rowitem"><td>Capture/Compare/PWM Peripherals</td><td>1 ECCP /</td></tr><tr class="rowaltitem"><td>Timers</td><td>2 x 8-bit, 1 x 16-bit</td></tr><tr class="rowitem"><td>ADC</td><td>12 ch, 10-bit</td></tr><tr class="rowaltitem"><td>Comparators</td><td>2</td></tr><tr class="rowitem"><td>Temperature Range (C)</td><td>-40 to 125</td></tr><tr class="rowaltitem"><td>Operating Voltage Range (V)</td><td>1.8 to 5.5</td></tr><tr class="rowitem"><td>Pin Count</td><td>18</td></tr><tr class="rowaltitem"><td>XLP</td><td>Yes</td></tr><tr class="rowitem"><td>Cap Touch Channels</td><td>12</td></tr></tbody></table>
+                </div>
+                <!-- Content End -->
+            
+</div>
+        </div>
+    </div>
+    <div id="MainContent" class="ui-accordion ui-widget ui-helper-reset ui-accordion-icons" role="tablist">
+        <h3 class="clearfix ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="0"><span class="ui-icon defaultIcon"></span>
+            <a name="documentation" class="titleContent">
+                <span id="ctl00_cphContainer_lblDocumentation">Documentation &amp; Software</span></a>
+            <a class="backToTop">
+                <span id="ctl00_cphContainer_lblBackToTop1">Back To Top</span></a>
+        </h3>
+        <div id="DocumentationContent" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+            <div id="ctl00_cphContainer_pnlDocumentation">
+	
+                <!-- Documentation Content Begin -->
+                
+                
+                &nbsp;<input type="hidden" name="ctl00$cphContainer$hdnLang" id="ctl00_cphContainer_hdnLang" value="en:English,cn:中文,jp:日本語">
+                <span style="display: none;">
+                    
+                </span>
+                <table id="tblDocumentation" class="border"><tbody><tr class="tableheader"><td width="74%"><a name="datasheet"></a>Data Sheets</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41391D.pdf" ;"="">PIC16(L)F1826/27 18/20/28-Pin Flash MCU with nanoWatt XLP </a></td><td>04/29/2011</td><td>3332KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41391D.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41391D.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/41391d_cn.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp544642.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Errata</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/80485K.pdf" ;"="">PIC16(L)F1826/1827 Family Silicon Errata and Data Sheet Clarification</a></td><td>07/02/2012</td><td>340KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/80485K.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/80485K.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/cn545320.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp545320.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Migration Documents</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41375A.pdf" ;"="">PIC1XF1XXX Software Migration</a></td><td>05/11/2009</td><td>312KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41375A.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41375A.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/41375A_CN.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp541398.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Programming Specifications</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41390D.pdf" ;"="">PIC12(L)F1822/PIC16(L)F182X Memory Programming Specification</a></td><td>09/27/2012</td><td>593KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41390D.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41390D.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/cn542471.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp542471.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Application Notes</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en541031" ;"="">AN1267 - nanoWatt &amp; nanoWatt XLP(TM) Technologies: An Introduction to Microchip's Low Power devices</a></td><td>10/08/2009</td><td>259KB</td><td class="iconsColumn"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en541031"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=en541031&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=cn541031&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=jp541031&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en546181" ;"="">AN1302 - An I2C Bootloader for the PIC16F1XXX Enhanced Core</a></td><td>12/17/2009</td><td>92KB</td><td class="iconsColumn"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en546181"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=en546181&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=cn546181&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=jp546181&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en546209" ;"="">AN1303 - Software Real-Time Clock and Calendar Using PIC16F1827</a></td><td>12/16/2009</td><td>69KB</td><td class="iconsColumn"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en546209"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=en546209&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=cn546209&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=jp546209&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en546974" ;"="">AN1310 - High-Speed Bootloader for PIC16 and PIC18 Devices</a></td><td>02/03/2010</td><td>482KB</td><td class="iconsColumn"><a target="_blank" href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=1824&appnote=en546974"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=en546974&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=cn546974&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&amp;nodeId=1824&amp;appnote=jp546974&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Brochures</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41565d.pdf" ;"="">Core Independent Peripherals for 8-bit PIC(R) Microcontrollers Brochure</a></td><td>11/11/2012</td><td>3731KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41565d.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41565d.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/41565c_cn.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/41565D_JP.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Product Brief</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41363A.pdf" ;"="">PIC16F1826/1827 Product Brief</a></td><td>12/15/2008</td><td>152KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41363A.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41363A.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/cn542780.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp538903.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Product Selection Tools</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/00001308k.pdf" ;"="">Corporate Product Selector Guide</a></td><td>08/05/2013</td><td>7357KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/00001308k.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/00001308k.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/cn540743.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/01308J_JP.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Sell Sheets</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41379b.pdf" ;"="">Choose PIC MCUs</a></td><td>04/27/2009</td><td>229KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41379b.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41379b.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/41379b_cn.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp540808.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/51814a.pdf" ;"="">HI-TECH C Compilers by Microchip Technology</a></td><td>04/08/2009</td><td>900KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/51814a.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/51814a.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/51814A_CN.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/51814A_JP.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/51984b.pdf" ;"="">MPLAB® X IDE Product Overview</a></td><td>07/11/2011</td><td>182KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/51984b.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/51984b.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/51984B_CN.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/51984B_JP.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/30009941F.pdf" ;"="">nanoWatt XLP eXtreme Low Power MCUs Product Overview</a></td><td>10/11/2013</td><td>999KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/30009941F.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/30009941F.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/39941e_cn.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/39941E_JP.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41382a.pdf" ;"="">PIC MCUs with Enhanced Mid-Range Core Product Overview</a></td><td>05/01/2009</td><td>113KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41382a.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41382a.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/41382a_cn.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp541069.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41436a.pdf" ;"="">PIC12F/PIC16F182X Microcontroller Product Overview</a></td><td>08/30/2010</td><td>134KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/41436a.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/41436a.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/cn550183.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp550183.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr class="tableheader"><td width="74%">Tips and Tricks</td><td>Last Updated</td><td>Size</td><td></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/01146B.pdf" ;"="">PIC Microcontroller Compiled Tips 'n Tricks Guide</a></td><td>04/22/2009</td><td>5964KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/01146B.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/01146B.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/cn541028.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp541028.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr><tr><td width="74%"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/01146B_chapter%202.pdf" ;"="">PIC® MCU Tips 'n Tricks Featuring nanoWatt XLP Technology</a></td><td>04/22/2009</td><td>643KB</td><td class="iconsColumn"><a target="_blank" href="http://ww1.microchip.com/downloads/en/DeviceDoc/01146B_chapter%202.pdf"><img class="docLinkImgType" src="./PIC16F1826 - PIC® Microcontrollers_files/pdf.png" border="0" align="top" alt=""></a><input class="hdnLinks" type="hidden" value="&lt;table border=&#39;1px black;&#39;&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/en/DeviceDoc/01146B_chapter 2.pdf&#39; &gt;English&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/cn/DeviceDoc/en546585.pdf&#39; &gt;Chinese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;&lt;a href=&#39;http://ww1.microchip.com/downloads/jp/DeviceDoc/jp013819.pdf&#39; &gt;Japanese&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;"></td></tr></tbody></table>
+                <table id="ctl00_cphContainer_tblDocumentation" cellspacing="0" cellpadding="0" border="0" style="border-width:0px;border-collapse:collapse;border-collapse: collapse">
+
+	</table>
+            
+</div>
+        </div>
+        <h3 class="clearfix ui-accordion-header ui-helper-reset ui-state-active ui-corner-top ui-state-hover" role="tab" aria-expanded="true" aria-selected="true" tabindex="0"><span class="ui-icon selectedIcon"></span>
+            <a name="pricindAndSamples" class="titleContent">
+                
+                <span id="ctl00_cphContainer_lblPricing">Pricing &amp; Samples</span>
+            </a><a class="backToTop" href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964#">
+                <span id="ctl00_cphContainer_lblBackToTop2" class="SmallText">Back To Top</span>
+            </a>
+        </h3>
+        <div id="PricingandSamplesContent" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" role="tabpanel" style="display: block;">
+            
+            <div id="ctl00_cphContainer_pnlPricingAll">
+	
+                <!-- Begin Sample UC -->
+                
+
+<script language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/FormMisc.js" type="text/javascript"></script>
+
+<div>
+    <input type="hidden" id="PricingExpandHide" name="PricingExpandHide" value="Collapsed">
+    <input name="ctl00$cphContainer$uc_Pricing$hdnSortDirection" type="hidden" id="ctl00_cphContainer_uc_Pricing_hdnSortDirection" value="ASC">
+    
+</div>
+<div id="ctl00_cphContainer_uc_Pricing_pnlPricing">
+		
+    <div class="imagesDescription">
+        <span id="ctl00_cphContainer_uc_Pricing_lblMessage"></span>
+        <img id="ctl00_cphContainer_uc_Pricing_Image1" src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16.png" style="border-width:0px;">
+        &nbsp;=&nbsp;<span id="ctl00_cphContainer_uc_Pricing_lblSampleAPart">Sample a part</span>
+        &nbsp;&nbsp;<img id="ctl00_cphContainer_uc_Pricing_Image2" src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;">
+        &nbsp;=&nbsp;<span id="ctl00_cphContainer_uc_Pricing_lblBuyAPart">Buy a part</span>
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;<span id="ctl00_cphContainer_uc_Pricing_lblUSDPricing">All pricing shown in USD only.</span>
+    </div>
+    <table class="PriceAndSamples border" cellspacing="0" rules="all" border="1" id="ctl00_cphContainer_uc_Pricing_dtgProdResults" style="border-collapse:collapse;">
+			<tbody><tr class="tableheader" align="center">
+				<td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl00','')">Part Number</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl01','')">Leads</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl02','')">Package Type</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl03','')">Temp Range</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl04','')">Packing</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl06','')">1-25</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl07','')">26-99</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl08','')">100+</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl09','')">1000-4999</a></td><td><a href="javascript:__doPostBack('ctl00$cphContainer$uc_Pricing$dtgProdResults$ctl01$ctl10','')">5000+</a></td><td>Buy</td><td>Sample</td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16F1826-E/ML</td><td align="center" style="width:40px;">28</td><td style="width:125px;">QFN</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl02_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.66</td><td align="center" style="width:80px;">1.52</td><td align="center" style="width:80px;">1.37</td><td align="center" style="color:#333333;width:80px;">1.26 *</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl02_hypBuy" title="Click here to purchase PIC16F1826-E/ML.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-E/ML.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl02_hypSample" title="Click here to sample the PIC16F1826-E/ML device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-E/ML device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16F1826-E/MV</td><td align="center" style="width:40px;">28</td><td style="width:125px;">UQFN</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl03_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.65</td><td align="center" style="width:80px;">1.51</td><td align="center" style="width:80px;">1.37</td><td align="center" style="color:#333333;width:80px;">1.26 *</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl03_hypBuy" title="Click here to purchase PIC16F1826-E/MV.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-E/MV.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl03_hypSample" title="Click here to sample the PIC16F1826-E/MV device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-E/MV device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16F1826-E/P</td><td align="center" style="width:40px;">18</td><td style="width:125px;">PDIP</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl04_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.56</td><td align="center" style="width:80px;">1.43</td><td align="center" style="width:80px;">1.29</td><td align="center" style="color:#333333;width:80px;">1.19 *</td><td align="center" style="color:#333333;width:80px;">1.13 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl04_hypBuy" title="Click here to purchase PIC16F1826-E/P.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-E/P.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl04_hypSample" title="Click here to sample the PIC16F1826-E/P device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-E/P device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16F1826-E/SO</td><td align="center" style="width:40px;">18</td><td style="width:125px;">SOIC 300mil</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl05_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.46</td><td align="center" style="width:80px;">1.34</td><td align="center" style="width:80px;">1.21</td><td align="center" style="color:#333333;width:80px;">1.12 *</td><td align="center" style="color:#333333;width:80px;">1.06 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl05_hypBuy" title="Click here to purchase PIC16F1826-E/SO.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-E/SO.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl05_hypSample" title="Click here to sample the PIC16F1826-E/SO device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-E/SO device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16F1826-E/SS</td><td align="center" style="width:40px;">20</td><td style="width:125px;">SSOP 208mil</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl06_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.46</td><td align="center" style="width:80px;">1.34</td><td align="center" style="width:80px;">1.21</td><td align="center" style="color:#333333;width:80px;">1.12 *</td><td align="center" style="color:#333333;width:80px;">1.06 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl06_hypBuy" title="Click here to purchase PIC16F1826-E/SS.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-E/SS.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl06_hypSample" title="Click here to sample the PIC16F1826-E/SS device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-E/SS device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16F1826-I/ML</td><td align="center" style="width:40px;">28</td><td style="width:125px;">QFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl07_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.52</td><td align="center" style="width:80px;">1.40</td><td align="center" style="width:80px;">1.26</td><td align="center" style="color:#333333;width:80px;">1.16 *</td><td align="center" style="color:#333333;width:80px;">1.11 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl07_hypBuy" title="Click here to purchase PIC16F1826-I/ML.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-I/ML.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl07_hypSample" title="Click here to sample the PIC16F1826-I/ML device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-I/ML device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16F1826-I/MV</td><td align="center" style="width:40px;">28</td><td style="width:125px;">UQFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl08_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.52</td><td align="center" style="width:80px;">1.39</td><td align="center" style="width:80px;">1.26</td><td align="center" style="color:#333333;width:80px;">1.16 *</td><td align="center" style="color:#333333;width:80px;">1.10 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl08_hypBuy" title="Click here to purchase PIC16F1826-I/MV.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-I/MV.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl08_hypSample" title="Click here to sample the PIC16F1826-I/MV device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-I/MV device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16F1826-I/P</td><td align="center" style="width:40px;">18</td><td style="width:125px;">PDIP</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl09_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.43</td><td align="center" style="width:80px;">1.31</td><td align="center" style="width:80px;">1.18</td><td align="center" style="color:#333333;width:80px;">1.09 *</td><td align="center" style="color:#333333;width:80px;">1.04 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl09_hypBuy" title="Click here to purchase PIC16F1826-I/P.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-I/P.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl09_hypSample" title="Click here to sample the PIC16F1826-I/P device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-I/P device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16F1826-I/SO</td><td align="center" style="width:40px;">18</td><td style="width:125px;">SOIC 300mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl10_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.33</td><td align="center" style="width:80px;">1.22</td><td align="center" style="width:80px;">1.10</td><td align="center" style="color:#333333;width:80px;">1.02 *</td><td align="center" style="color:#333333;width:80px;">0.97 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl10_hypBuy" title="Click here to purchase PIC16F1826-I/SO.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-I/SO.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl10_hypSample" title="Click here to sample the PIC16F1826-I/SO device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-I/SO device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16F1826-I/SS</td><td align="center" style="width:40px;">20</td><td style="width:125px;">SSOP 208mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl11_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.33</td><td align="center" style="width:80px;">1.22</td><td align="center" style="width:80px;">1.10</td><td align="center" style="color:#333333;width:80px;">1.02 *</td><td align="center" style="color:#333333;width:80px;">0.97 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl11_hypBuy" title="Click here to purchase PIC16F1826-I/SS.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826-I/SS.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl11_hypSample" title="Click here to sample the PIC16F1826-I/SS device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16F1826-I/SS device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16F1826T-I/ML</td><td align="center" style="width:40px;">28</td><td style="width:125px;">QFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl12_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.57</td><td align="center" style="width:80px;">1.44</td><td align="center" style="width:80px;">1.30</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="color:#333333;width:80px;">1.14 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl12_hypBuy" title="Click here to purchase PIC16F1826T-I/ML.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826T-I/ML.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16F1826T-I/MV</td><td align="center" style="width:40px;">28</td><td style="width:125px;">UQFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl13_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.57</td><td align="center" style="width:80px;">1.44</td><td align="center" style="width:80px;">1.30</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="color:#333333;width:80px;">1.14 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl13_hypBuy" title="Click here to purchase PIC16F1826T-I/MV.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826T-I/MV.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16F1826T-I/SO</td><td align="center" style="width:40px;">18</td><td style="width:125px;">SOIC 300mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl14_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.38</td><td align="center" style="width:80px;">1.26</td><td align="center" style="width:80px;">1.14</td><td align="center" style="color:#333333;width:80px;">1.05 *</td><td align="center" style="color:#333333;width:80px;">1.00 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl14_hypBuy" title="Click here to purchase PIC16F1826T-I/SO.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826T-I/SO.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16F1826T-I/SS</td><td align="center" style="width:40px;">20</td><td style="width:125px;">SSOP 208mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl15_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.38</td><td align="center" style="width:80px;">1.26</td><td align="center" style="width:80px;">1.14</td><td align="center" style="color:#333333;width:80px;">1.05 *</td><td align="center" style="color:#333333;width:80px;">1.00 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl15_hypBuy" title="Click here to purchase PIC16F1826T-I/SS.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16F1826T-I/SS.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16LF1826-E/ML</td><td align="center" style="width:40px;">28</td><td style="width:125px;">QFN</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl16_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.66</td><td align="center" style="width:80px;">1.52</td><td align="center" style="width:80px;">1.37</td><td align="center" style="color:#333333;width:80px;">1.26 *</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl16_hypBuy" title="Click here to purchase PIC16LF1826-E/ML.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-E/ML.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16LF1826-E/MV</td><td align="center" style="width:40px;">28</td><td style="width:125px;">UQFN</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl17_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.65</td><td align="center" style="width:80px;">1.51</td><td align="center" style="width:80px;">1.37</td><td align="center" style="color:#333333;width:80px;">1.26 *</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl17_hypBuy" title="Click here to purchase PIC16LF1826-E/MV.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-E/MV.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16LF1826-E/P</td><td align="center" style="width:40px;">18</td><td style="width:125px;">PDIP</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl18_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.56</td><td align="center" style="width:80px;">1.43</td><td align="center" style="width:80px;">1.29</td><td align="center" style="color:#333333;width:80px;">1.19 *</td><td align="center" style="color:#333333;width:80px;">1.13 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl18_hypBuy" title="Click here to purchase PIC16LF1826-E/P.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-E/P.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16LF1826-E/SO</td><td align="center" style="width:40px;">18</td><td style="width:125px;">SOIC 300mil</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl19_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.46</td><td align="center" style="width:80px;">1.34</td><td align="center" style="width:80px;">1.21</td><td align="center" style="color:#333333;width:80px;">1.12 *</td><td align="center" style="color:#333333;width:80px;">1.06 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl19_hypBuy" title="Click here to purchase PIC16LF1826-E/SO.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-E/SO.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16LF1826-E/SS</td><td align="center" style="width:40px;">20</td><td style="width:125px;">SSOP 208mil</td><td align="center" style="width:155px;">-40C to +125C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl20_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.46</td><td align="center" style="width:80px;">1.34</td><td align="center" style="width:80px;">1.21</td><td align="center" style="color:#333333;width:80px;">1.12 *</td><td align="center" style="color:#333333;width:80px;">1.06 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl20_hypBuy" title="Click here to purchase PIC16LF1826-E/SS.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-E/SS.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16LF1826-I/ML</td><td align="center" style="width:40px;">28</td><td style="width:125px;">QFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl21_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.52</td><td align="center" style="width:80px;">1.40</td><td align="center" style="width:80px;">1.26</td><td align="center" style="color:#333333;width:80px;">1.16 *</td><td align="center" style="color:#333333;width:80px;">1.11 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl21_hypBuy" title="Click here to purchase PIC16LF1826-I/ML.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-I/ML.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl21_hypSample" title="Click here to sample the PIC16LF1826-I/ML device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16LF1826-I/ML device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16LF1826-I/MV</td><td align="center" style="width:40px;">28</td><td style="width:125px;">UQFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl22_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.52</td><td align="center" style="width:80px;">1.39</td><td align="center" style="width:80px;">1.26</td><td align="center" style="color:#333333;width:80px;">1.16 *</td><td align="center" style="color:#333333;width:80px;">1.10 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl22_hypBuy" title="Click here to purchase PIC16LF1826-I/MV.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-I/MV.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl22_hypSample" title="Click here to sample the PIC16LF1826-I/MV device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16LF1826-I/MV device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16LF1826-I/P</td><td align="center" style="width:40px;">18</td><td style="width:125px;">PDIP</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl23_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.43</td><td align="center" style="width:80px;">1.31</td><td align="center" style="width:80px;">1.18</td><td align="center" style="color:#333333;width:80px;">1.09 *</td><td align="center" style="color:#333333;width:80px;">1.04 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl23_hypBuy" title="Click here to purchase PIC16LF1826-I/P.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-I/P.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl23_hypSample" title="Click here to sample the PIC16LF1826-I/P device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16LF1826-I/P device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16LF1826-I/SO</td><td align="center" style="width:40px;">18</td><td style="width:125px;">SOIC 300mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl24_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.33</td><td align="center" style="width:80px;">1.22</td><td align="center" style="width:80px;">1.10</td><td align="center" style="color:#333333;width:80px;">1.02 *</td><td align="center" style="color:#333333;width:80px;">0.97 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl24_hypBuy" title="Click here to purchase PIC16LF1826-I/SO.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-I/SO.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl24_hypSample" title="Click here to sample the PIC16LF1826-I/SO device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16LF1826-I/SO device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16LF1826-I/SS</td><td align="center" style="width:40px;">20</td><td style="width:125px;">SSOP 208mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl25_lblPacking">TUBE</span>
+                    
+                </td><td title="Tube" align="center" style="width:80px;">1.33</td><td align="center" style="width:80px;">1.22</td><td align="center" style="width:80px;">1.10</td><td align="center" style="color:#333333;width:80px;">1.02 *</td><td align="center" style="color:#333333;width:80px;">0.97 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl25_hypBuy" title="Click here to purchase PIC16LF1826-I/SS.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826-I/SS.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl25_hypSample" title="Click here to sample the PIC16LF1826-I/SS device.  You will be redirected to sample.microchip.com." href="http://www.microchip.com/samples/Default.aspx?DeviceFamily=PIC16F1826" target="_parent"><img title="Click here to sample the PIC16LF1826-I/SS device.  You will be redirected to sample.microchip.com." src="./PIC16F1826 - PIC® Microcontrollers_files/sample-16(1).png" style="border-width:0px;"></a>
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16LF1826T-I/ML</td><td align="center" style="width:40px;">28</td><td style="width:125px;">QFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl26_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.57</td><td align="center" style="width:80px;">1.44</td><td align="center" style="width:80px;">1.30</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="color:#333333;width:80px;">1.14 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl26_hypBuy" title="Click here to purchase PIC16LF1826T-I/ML.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826T-I/ML.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16LF1826T-I/MV</td><td align="center" style="width:40px;">28</td><td style="width:125px;">UQFN</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl27_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.57</td><td align="center" style="width:80px;">1.44</td><td align="center" style="width:80px;">1.30</td><td align="center" style="color:#333333;width:80px;">1.20 *</td><td align="center" style="color:#333333;width:80px;">1.14 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl27_hypBuy" title="Click here to purchase PIC16LF1826T-I/MV.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826T-I/MV.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowitem">
+				<td style="width:185px;">PIC16LF1826T-I/SO</td><td align="center" style="width:40px;">18</td><td style="width:125px;">SOIC 300mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl28_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.38</td><td align="center" style="width:80px;">1.26</td><td align="center" style="width:80px;">1.14</td><td align="center" style="color:#333333;width:80px;">1.05 *</td><td align="center" style="color:#333333;width:80px;">1.00 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl28_hypBuy" title="Click here to purchase PIC16LF1826T-I/SO.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826T-I/SO.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr><tr class="rowaltitem">
+				<td style="width:185px;">PIC16LF1826T-I/SS</td><td align="center" style="width:40px;">20</td><td style="width:125px;">SSOP 208mil</td><td align="center" style="width:155px;">-40C to +85C</td><td align="center" style="width:85px;">
+                    <span id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl29_lblPacking">T/R</span>
+                    
+                </td><td title="Tape and reel" align="center" style="width:80px;">1.38</td><td align="center" style="width:80px;">1.26</td><td align="center" style="width:80px;">1.14</td><td align="center" style="color:#333333;width:80px;">1.05 *</td><td align="center" style="color:#333333;width:80px;">1.00 *</td><td align="center" style="width:45px;">
+                    <a id="ctl00_cphContainer_uc_Pricing_dtgProdResults_ctl29_hypBuy" title="Click here to purchase PIC16LF1826T-I/SS.  You will be redirected to www.microchipdirect.com." href="http://www.microchipdirect.com/productdetails.aspx?mid=10&catalog=buymicrochip&category=PIC16F1826" target="_parent"><img title="Click here to purchase PIC16LF1826T-I/SS.  You will be redirected to www.microchipdirect.com." src="./PIC16F1826 - PIC® Microcontrollers_files/buy-16.png" style="border-width:0px;"></a>
+                </td><td align="center" style="width:45px;">
+                    
+                    
+                </td>
+			</tr>
+		</tbody></table>
+    <div class="notesDescription">
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <span id="ctl00_cphContainer_uc_Pricing_lblPricingFooter1"><span class="NormalGreen">* microchip</span><span class="NormalBold" style="FONT-WEIGHT: bold; COLOR: black">DIRECT</span><span class="NormalGreen"> "business" account and approved quote required. Open a </span><a href="http://www.microchipdirect.com/preferredapplication.aspx"><span class="NormalGreen">microchip</span><span class="NormalBold" style="FONT-WEIGHT: bold; COLOR: black">DIRECT</span></a><span class="NormalGreen"> account today!</span></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span id="ctl00_cphContainer_uc_Pricing_lblPricingFooter2"><span class="NormalGreen">** Device not available to purchase online.  Please contact a <a target="_parent" href="http://www.microchip.com/sales">sales office</a> for pricing information.</span></span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="clear">
+    </div>
+
+	</div>
+
+                <!-- End Sample UC -->
+            
+</div>
+        </div>
+        <h3 class="clearfix ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon defaultIcon"></span>
+            <a name="developmentTools" class="titleContent">
+                <span id="ctl00_cphContainer_lblDevToolsTitle">Development Tools</span>
+            </a><a class="backToTop">
+                <span id="ctl00_cphContainer_lblBackToTop3" class="SmallText">Back To Top</span>
+            </a>
+        </h3>
+        <div id="DevelopmentToolsContent" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+            <div id="ctl00_cphContainer_pnlDevToolsAll">
+	
+                <!-- Begin DevTool UC -->
+                
+<link rel="stylesheet" href="./PIC16F1826 - PIC® Microcontrollers_files/jquery.cluetip.css" type="text/css">
+<script type="text/javascript" language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/jquery.hoverIntent.js"></script>
+<script type="text/javascript" language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/jquery.cluetip.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+
+
+        var pagefirstL = true;
+
+        //On Click Event
+        $('ul.tabs2 li').live('click', function (e) {
+            //$("ul.tabs2 li").click(function () {
+            $("ul.tabs2 li").removeClass("active"); //Remove any "active" class
+            $(this).addClass("active"); //Add "active" class to selected tab
+            $(".tab_content").hide(); //Hide all tab content
+
+            var activeTab = $('#' + $(this).find("a").attr("href").split('#')[1]); //Find the href attribute value to identify the active tab + content
+
+
+            $(activeTab).fadeIn(); //Fade in the active ID content
+            if (document.URL.toUpperCase().indexOf("DTS.ASPX") < 0 && !pagefirstL)
+                window.scrollTo(0, $('#Devtoolctst').offset().top);
+            //                $('body, html').animate({
+            //                    scrollTop: $('#Devtoolctst').offset().top
+            //                }, 500);
+            e.preventDefault();
+
+        });
+
+        $(document).ready(function () {
+            $('.rollover').cluetip({ cluezIndex: 9999,  showTitle: false, ajaxSettings: 'xml', ajaxProcess: function (data) { return $(data).find('string').text() } });
+
+        });
+
+        $(".active").find("a").trigger('click');
+
+        pagefirstL = false;
+
+        if (document.URL.toUpperCase().indexOf("DTS.ASPX") > 0)
+            $(".tab_container").attr("style", "min-height:750px");
+
+
+    }); 
+</script>
+<div>
+    <div class="clearfix" id="Devtoolctst">
+        <div style="float: left;width:800px">
+            <ul class="tabs2">
+                <li id="ctl00_cphContainer_uc_DevToolChart_ADivDemo" class="active"><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964#DivDemoboards">Demo &amp; Eval Boards</a></li>
+                <li id="ctl00_cphContainer_uc_DevToolChart_ADivEmu"><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964#DivEmulators">Emulators &amp; Debuggers</a></li>
+                <li id="ctl00_cphContainer_uc_DevToolChart_ADivProg"><a href="http://www.microchip.com/wwwproducts/Devices.aspx?dDocName=en538964#DivProgrammer">Programmers</a> </li>
+                
+                
+            </ul>
+            <div class="tab_container">
+                <div id="DivEmulators" class="tab_content" style="display: none;">
+                        
+                            <div width="100%">                            
+                            
+                            <p>
+                                </p><div style="float:left;width:60%">
+                                 <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/PG164130.jpg" border="0">
+                                    <a target="microchip" href="http://www.microchip.com/PG164130" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=PG164130">
+                                        PICkit 3 In-Circuit Debugger
+                                        (PG164130) </a>
+                                        
+                                    <br><b>Debug Features:</b><br>
+                                    <span>
+                                         
+                                         
+                                        Pgm-memory HW breakpoints:1<br>Data-memory breakpoints:1<br>
+                                         
+                                        
+                                    </span>
+                                </div>
+                                <div style="float:left;width:40%;padding-top:30px"> 
+                                <b>Header:</b>
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=AC244046" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=AC244046">
+                                        AC244046
+                                    </a>
+                                    (Optional)
+                                    <br><br><br><b>Debug Features:</b><br>
+                                    <span>
+                                         
+                                         
+                                        Pgm-memory HW breakpoints:3<br>Data-memory breakpoints:3<br>
+                                        
+                                      
+                                    </span>
+                                 
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=">
+                                        
+                                    </a>
+                                </div>
+                                <hr>
+                                <p>&nbsp;</p>
+                            <p></p>
+                            
+                            <p>
+                                </p><div style="float:left;width:60%">
+                                 <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV164035.jpg" border="0">
+                                    <a target="microchip" href="http://www.microchip.com/DV164035" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV164035">
+                                        MPLAB ICD 3 In-Circuit Debugger
+                                        (DV164035) </a>
+                                        
+                                    <br><b>Debug Features:</b><br>
+                                    <span>
+                                         
+                                         
+                                        Pgm-memory HW breakpoints:1<br>Data-memory breakpoints:1<br>Pgm-memory SW breakpoints:Unlimited<br>
+                                         
+                                        
+                                    </span>
+                                </div>
+                                <div style="float:left;width:40%;padding-top:30px"> 
+                                <b>Header:</b>
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=AC244046" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=AC244046">
+                                        AC244046
+                                    </a>
+                                    (Optional)
+                                    <br><br><br><b>Debug Features:</b><br>
+                                    <span>
+                                         
+                                         
+                                        Pgm-memory HW breakpoints:3<br>Data-memory breakpoints:3<br>Pgm-memory SW breakpoints:Unlimited<br>
+                                        
+                                      
+                                    </span>
+                                 
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=">
+                                        
+                                    </a>
+                                </div>
+                                <hr>
+                                <p>&nbsp;</p>
+                            <p></p>
+                            
+                            <p>
+                                </p><div style="float:left;width:60%">
+                                 <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV244005.jpg" border="0">
+                                    <a target="microchip" href="http://www.microchip.com/DV244005" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV244005">
+                                        MPLAB REAL ICE PROBE KIT
+                                        (DV244005) </a>
+                                        
+                                    <br><b>Debug Features:</b><br>
+                                    <span>
+                                         
+                                         
+                                        Pgm-memory HW breakpoints:1<br>Data-memory breakpoints:1<br>Pgm-memory SW breakpoints:Unlimited<br>
+                                         
+                                        
+                                    </span>
+                                </div>
+                                <div style="float:left;width:40%;padding-top:30px"> 
+                                <b>Header:</b>
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=AC244046" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=AC244046">
+                                        AC244046
+                                    </a>
+                                    (Optional)
+                                    <br><br><br><b>Debug Features:</b><br>
+                                    <span>
+                                         
+                                         
+                                        Pgm-memory HW breakpoints:3<br>Data-memory breakpoints:3<br>Data capture:Enabled<br>Pgm-memory SW breakpoints:Unlimited<br>
+                                        
+                                      
+                                    </span>
+                                 <br><b>Accessories:</b>
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=AC244008" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=AC244008">
+                                        AC244008
+                                    </a>
+                                </div>
+                                <hr>
+                                <p>&nbsp;</p>
+                            <p></p>
+                            
+                            <p>
+                                </p><div style="float:left;width:60%">
+                                 <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV164005.jpg" border="0">
+                                    <a target="microchip" href="http://www.microchip.com/DV164005" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV164005">
+                                        MPLAB ICD 2 MODULE
+                                        (DV164005) </a>
+                                        
+                                    
+                                    <span>
+                                         
+                                         
+                                        
+                                         
+                                        
+                                    </span>
+                                </div>
+                                <div style="float:left;width:40%;padding-top:30px"> 
+                                <b>Header:</b>
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=AC244046" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=AC244046">
+                                        AC244046
+                                    </a>
+                                    (Optional)
+                                    
+                                    <span>
+                                         
+                                         
+                                        
+                                        
+                                      
+                                    </span>
+                                 
+                                    <a target="mD" href="http://www.microchipdirect.com/ProductSearch.aspx?keywords=" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=">
+                                        
+                                    </a>
+                                </div>
+                                <hr>
+                                <p>&nbsp;</p>
+                            <p></p>
+                            
+                                </div>
+                            
+                </div>
+                <div id="DivProgrammer" class="tab_content" style="display: none; padding-bottom: 10px;">
+                    <div width="100%"><div style="float:left;padding-right:20px;width:50%"><img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV007004.jpg" border="0"><a href="http://www.microchip.com/DV007004" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV007004">MPLAB PM3 Universal Device Programmer (DV007004)</a></div><div style="float:left;width:40%"><table class="border"><tbody><tr class="tableheader"><td width="50%"><b>Socket</b></td><td width="50%"><b>Part<b></b></b></td></tr><tr><td style="vertical-align:middle"><a href="http://www.microchip.com/AC164301">AC164301</a></td><td>PIC16F1826  (18P)<br></td></tr><tr><td style="vertical-align:middle"><a href="http://www.microchip.com/AC164302">AC164302</a></td><td>PIC16F1826  (18SO)<br></td></tr><tr><td style="vertical-align:middle"><a href="http://www.microchip.com/AC164307">AC164307</a></td><td>PIC16F1826  (20SS)<br></td></tr><tr><td style="vertical-align:middle"><a href="http://www.microchip.com/AC164322">AC164322</a></td><td>PIC16F1826  (28ML)<br></td></tr><tr><td style="vertical-align:middle"><a href="http://www.microchip.com/AC164345">AC164345</a></td><td>PIC16F1826  (28MV)<br></td></tr></tbody></table></div></div><br><hr><div width="100%"><div style="float:left;padding-right:20px;width:50%"><img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV164035.jpg" border="0"><a href="http://www.microchip.com/DV164035" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV164035">MPLAB ICD 3 In-Circuit Debugger (DV164035)</a></div><div style="float:left;width:40%"></div></div><br><hr><div width="100%"><div style="float:left;padding-right:20px;width:50%"><img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/PG164130.jpg" border="0"><a href="http://www.microchip.com/PG164130" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=PG164130">PICkit 3 In-Circuit Debugger (PG164130)</a></div><div style="float:left;width:40%"></div></div><br><hr><div width="100%"><div style="float:left;padding-right:20px;width:50%"><img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV244005.jpg" border="0"><a href="http://www.microchip.com/DV244005" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV244005">MPLAB REAL ICE PROBE KIT (DV244005)</a></div><div style="float:left;width:40%"></div></div><br><hr><div width="100%"><div style="float:left;padding-right:20px;width:50%"><img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV164005.jpg" border="0"><a href="http://www.microchip.com/DV164005" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV164005">MPLAB ICD 2 MODULE (DV164005)</a></div><div style="float:left;width:40%"></div></div><br>
+                </div>
+                <div id="DivDemoboards" class="tab_content" style="">
+                    
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM163026.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM163026" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM163026">
+                                    Low Power Solutions Demo Board
+                                    (DM163026) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM163022-1.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM163022-1" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM163022-1">
+                                    PICDEM 2 Plus
+                                    (DM163022-1) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM163014.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM163014" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM163014">
+                                    PICDEM 4
+                                    (DM163014) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM164120-4.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM164120-4" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM164120-4">
+                                    PICkit 18-Pin Demo Board
+                                    (DM164120-4) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV164036.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DV164036" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV164036">
+                                    MPLAB ICD 3 Evaluation Kit (with PICDEM 2 Plus)
+                                    (DV164036) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM164130-6.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM164130-6" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM164130-6">
+                                    F1 BDC Motor Add-On
+                                    (DM164130-6) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM164130-8.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM164130-8" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM164130-8">
+                                    F1 Unipolar Stepper Motor Add-On
+                                    (DM164130-8) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM163045.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM163045" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM163045">
+                                    PICDEM Lab Development Kit
+                                    (DM163045) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM164130-5.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM164130-5" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM164130-5">
+                                    F1 LV Evaluation Platform
+                                    (DM164130-5) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM164130-7.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM164130-7" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM164130-7">
+                                    F1 Bipolar Motor add-on
+                                    (DM164130-7) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM240313.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM240313" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM240313">
+                                    XLP 8-BIT Development Board
+                                    (DM240313) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DV164132.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DV164132" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DV164132">
+                                    F1 Evaluation Kit
+                                    (DV164132) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM164130-2.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM164130-2" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM164130-2">
+                                    F1 BLDC Motor Add-On
+                                    (DM164130-2) </a>
+                                    
+                            </p>
+                        
+                            <p>
+                                <img width="80px" height="80px" style="padding-right: 10px; vertical-align: middle;" src="./PIC16F1826 - PIC® Microcontrollers_files/DM164130-1.jpg" border="0">
+                                <a target="microchip" href="http://www.microchip.com/DM164130-1" class="rollover" rel="/wwwDescriptionService/DescriptionService.asmx/GetLongDescriptionAndImage?language=en&amp;cpn=DM164130-1">
+                                    F1 Evaluation Platform
+                                    (DM164130-1) </a>
+                                    
+                            </p>
+                        
+                </div>
+                <div id="DivSoftware" class="tab_content" style="display: none;">
+                    
+                </div>
+                <div id="DivDesignTools" class="tab_content" style="display: none;">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                <!-- End DevTool UC -->
+            
+</div>
+        </div>
+        <h3 class="clearfix ui-accordion-header ui-helper-reset ui-state-default ui-corner-all" role="tab" aria-expanded="false" aria-selected="false" tabindex="-1"><span class="ui-icon defaultIcon"></span>
+            <a name="rohsInformation" class="titleContent">
+                <span id="ctl00_cphContainer_lblRoHSTitle">RoHS  Information</span>
+            </a><a class="backToTop">
+                <span id="ctl00_cphContainer_lblBackToTop4" class="SmallText">Back To Top</span>
+            </a>
+        </h3>
+        <div id="RoHSInformationContent" class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" role="tabpanel" style="display: none;">
+            <!-- Begin RoHS grid data UC -->
+            
+
+<script language="javascript" src="./PIC16F1826 - PIC® Microcontrollers_files/FormMisc(1).js"></script>
+
+<div id="ctl00_cphContainer_uc_RoHS_pnlRoHSAll">
+	
+    <div id="ctl00_cphContainer_uc_RoHS_pnlRoHS">
+		
+        <table class="border" cellspacing="0" rules="all" border="1" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData" style="border-collapse:collapse;">
+			<tbody><tr class="tableheader" align="center" valign="top">
+				<td>Part Number</td><td>Device Weight (Grams) each</td><td>Shipping Weight (Grams) each</td><td>Lead Count      </td><td>Package Type      </td><td>Package Width   </td><td>Solder Composition</td><td>JEDEC Indicator</td><td>RoHS</td><td>China EFUP</td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-E/SO
+                    </td><td>
+                        0.481000
+                    </td><td>
+                        0.857143
+                    </td><td align="center">
+                        18
+                    </td><td align="center">
+                        SOIC
+                    </td><td align="center">
+                        .300in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl02_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl02_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl02_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-I/SO
+                    </td><td>
+                        0.481000
+                    </td><td>
+                        0.857143
+                    </td><td align="center">
+                        18
+                    </td><td align="center">
+                        SOIC
+                    </td><td align="center">
+                        .300in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl03_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl03_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl03_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826T-I/SO
+                    </td><td>
+                        0.481000
+                    </td><td>
+                        1.000909
+                    </td><td align="center">
+                        18
+                    </td><td align="center">
+                        SOIC
+                    </td><td align="center">
+                        .300in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl04_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl04_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl04_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826T-E/SO
+                    </td><td>
+                        0.481000
+                    </td><td>
+                        1.000909
+                    </td><td align="center">
+                        18
+                    </td><td align="center">
+                        SOIC
+                    </td><td align="center">
+                        .300in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl05_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl05_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl05_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-E/P
+                    </td><td>
+                        1.248000
+                    </td><td>
+                        2.200000
+                    </td><td align="center">
+                        18
+                    </td><td align="center">
+                        PDIP
+                    </td><td align="center">
+                        .300in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl06_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl06_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl06_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-I/P
+                    </td><td>
+                        1.248000
+                    </td><td>
+                        2.200000
+                    </td><td align="center">
+                        18
+                    </td><td align="center">
+                        PDIP
+                    </td><td align="center">
+                        .300in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl07_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl07_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl07_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826T-I/SS
+                    </td><td>
+                        0.164200
+                    </td><td>
+                        0.416250
+                    </td><td align="center">
+                        20
+                    </td><td align="center">
+                        SSOP
+                    </td><td align="center">
+                        .209in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl08_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl08_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl08_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-E/SS
+                    </td><td>
+                        0.164200
+                    </td><td>
+                        0.343284
+                    </td><td align="center">
+                        20
+                    </td><td align="center">
+                        SSOP
+                    </td><td align="center">
+                        .209in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl09_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl09_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl09_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-I/SS
+                    </td><td>
+                        0.164200
+                    </td><td>
+                        0.343284
+                    </td><td align="center">
+                        20
+                    </td><td align="center">
+                        SSOP
+                    </td><td align="center">
+                        .209in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl10_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl10_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl10_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826T-E/SS
+                    </td><td>
+                        0.164200
+                    </td><td>
+                        0.416250
+                    </td><td align="center">
+                        20
+                    </td><td align="center">
+                        SSOP
+                    </td><td align="center">
+                        .209in
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl11_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl11_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl11_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-E/ML
+                    </td><td>
+                        0.086200
+                    </td><td>
+                        0.163934
+                    </td><td align="center">
+                        28
+                    </td><td align="center">
+                        QFN
+                    </td><td align="center">
+                        6x6x0.9mm
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl12_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl12_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl12_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826T-I/ML
+                    </td><td>
+                        0.086200
+                    </td><td>
+                        0.332500
+                    </td><td align="center">
+                        28
+                    </td><td align="center">
+                        QFN
+                    </td><td align="center">
+                        6x6x0.9mm
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl13_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl13_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl13_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-I/ML
+                    </td><td>
+                        0.086200
+                    </td><td>
+                        0.163934
+                    </td><td align="center">
+                        28
+                    </td><td align="center">
+                        QFN
+                    </td><td align="center">
+                        6x6x0.9mm
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl14_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl14_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl14_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-I/MV
+                    </td><td>
+                        0.026100
+                    </td><td>
+                        0.109890
+                    </td><td align="center">
+                        28
+                    </td><td align="center">
+                        UQFN
+                    </td><td align="center">
+                        4x4x0.5mm
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl15_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl15_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl15_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826T-I/MV
+                    </td><td>
+                        0.026100
+                    </td><td>
+                        0.212121
+                    </td><td align="center">
+                        28
+                    </td><td align="center">
+                        UQFN
+                    </td><td align="center">
+                        4x4x0.5mm
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl16_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl16_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl16_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr><tr class="rowaltitem" align="left">
+				<td align="left" style="width:250px;">
+                        PIC16F1826-E/MV
+                    </td><td>
+                        0.026100
+                    </td><td>
+                        0.109890
+                    </td><td align="center">
+                        28
+                    </td><td align="center">
+                        UQFN
+                    </td><td align="center">
+                        4x4x0.5mm
+                    </td><td align="center" style="width:80px;">
+                        Matte Sn
+                    </td><td align="center" style="width:80px;">
+                        <span id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl17_lblJedInd">e3</span>
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/Rohs.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl17_imgPic" class="imgPic" width="40" height="20">
+                        
+                    </td><td align="center" style="width:100px;">
+                        
+                        <img src="./PIC16F1826 - PIC® Microcontrollers_files/ChinaEUI.png" id="ctl00_cphContainer_uc_RoHS_dtgRoHSData_ctl17_imgPicCHN" class="imgPicCHN" width="40" height="20">
+                        
+                    </td>
+			</tr>
+		</tbody></table>
+    
+	</div>
+    <div>
+        <!-- Content Begin -->
+        
+        
+        To see a complete listing of RoHS data for this device, please click <a href="http://www.microchip.com/wwwproducts/RoHS.aspx?Part=PIC16F1826" target="_blank">here</a>
+        <br>
+          Shipping Weight = Device Weight + Packing Material weight. Please <a href="http://www.microchip.com/stellent/idcplg?IdcService=SS_GET_PAGE&nodeId=71" target="_blank">contact Sales</a> office if device weight is not available.<br> 
+     </div>
+
+</div>
+
+            <!-- End Rohs UC -->
+        </div>
+    </div>
+    
+    </form>
+
+            </div>
+            <!-- End Main Content Area -->
+        </div>
+        <!-- ==================== End Wrapper ======================== -->
+    </div>
+    <!-- ===================== Begin Footer ======================= -->
+    <div id="superfooter" class="clear">
+
+	<div id="footer" class="clearfix">
+        <!-- ==================== Social Media Bar ======================== -->	
+        <div class="socialbar clearfix left" style="width:155px">
+    	        <a href="http://www.facebook.com/pages/Microchip-Technology-Inc/20320981741"><img src="./PIC16F1826 - PIC® Microcontrollers_files/facebook_32.png" alt="Facebook"></a>
+    	        <a href="http://www.linkedin.com/"><img src="./PIC16F1826 - PIC® Microcontrollers_files/linkedin_32.png" alt="Linked In"></a>
+    	        <a href="http://twitter.com/MicrochipTech"><img src="./PIC16F1826 - PIC® Microcontrollers_files/twitter_32.png" alt="Twitter"></a>
+    	        <a href="http://www.youtube.com/user/MicrochipTechnology"><img src="./PIC16F1826 - PIC® Microcontrollers_files/youtube_32.png" alt="YouTube"></a>
+    	        <a href="http://www.microchip.com/rss/"><img src="./PIC16F1826 - PIC® Microcontrollers_files/rss_32.png" alt="RSS"></a>
+        </div>
+
+        <ul class="nav clearfix" style="width:450px">
+          <!-- ==================== Products Menu ======================== -->
+          <li id="footer-products">
+            <a href="http://www.microchip.com/products/" title="Products">Products</a>
+          </li>
+          <!-- ==================== Applications Menu ======================== -->
+          <li id="footer-applications">
+            <a href="http://www.microchip.com/application/" title="Applications">Applications</a>
+          </li>
+          <!-- ==================== Design Support Menu ======================== -->
+          <li id="footer-design">
+            <a href="http://www.microchip.com/designsupport/" title="Design Support">Design Support</a>
+          </li>
+          <!-- ==================== Training Menu ======================== -->
+          <li id="footer-training">
+            <a href="http://www.microchip.com/training/" title="Training">Training</a>
+          </li>
+          <!-- ==================== Sample & Buy Menu ======================== -->
+          <li id="footer-buysample">
+            <a href="http://www.microchipdirect.com/" name="menuSampleampBuy" title="Sample &amp; Buy">Sample &amp; Buy</a>
+          </li>
+          <!-- ==================== About Us Menu ======================== -->
+          <li id="footer-aboutus">
+            <a href="http://www.microchip.com/aboutus/" title="About Us">About Us</a>
+          </li>
+          <!-- ==================== Contact Menu ======================== -->
+          <li id="footercontactus">
+            <a href="http://www.microchip.com/contactus/" title="click to contact us">Contact Us</a>
+          </li>
+          <li id="footer-legal">
+            <a href="http://www.microchip.com/legal/" name="menuLegal" title="Legal">Legal</a>
+          </li>
+          <li id="footer-investors">
+            <a href="http://www.microchip.com/investors/" title="Investors">Investors</a>
+          </li>
+          <li id="footer-careers">
+            <a href="http://www.microchip.com/careers/" title="Careers">Careers</a>
+          </li>
+          
+        </ul>
+        <!-- ==================== Copyright Info ======================== -->
+        <ul class="right">
+        	<li class="xsmall">
+            <a href="http://www.microchip.com/legal/">©Copyright 1998-2013</a> Microchip Technology Inc. All rights reserved.</li>
+            <li class="xsmall"><a href="http://www.miibeian.gov.cn/">Shanghai ICP Recordal No.09049794</a></li>
+        </ul>
+	</div>
+  <!-- ==================== Analytics Code ======================== -->
+  <div style="display:none"><img src="./PIC16F1826 - PIC® Microcontrollers_files/default.aspx" width="0" height="0" alt="" border="0"></div>
+</div>
+    <!-- ===================== End Footer ========================= -->
+
+
+<div id="cluetip-waitimage" style="position: absolute; display: none;"></div><div id="cluetip" style="position: absolute; display: none;"><div class="cluetip-outer" style="position: relative; z-index: 9999;"><h3 class="cluetip-title ui-widget-header ui-cluetip-header"></h3><div class="cluetip-inner ui-widget-content ui-cluetip-content"></div></div><div class="cluetip-extra"></div></div></body></html>

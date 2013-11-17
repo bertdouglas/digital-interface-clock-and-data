@@ -1,0 +1,13 @@
+Description
+This project is about programming a PIC chip to provide a serial Clock and Data lines from an stream of 78 bytes that will be provided from a PC I/O port. 
+The interface to the PC will be done with an 8 bit data bus and two control lines, DR (data ready) provided by the PC to indicate data is in the bus and an ACK line stroked by the PIC to indicate to the PC that data was received.
+Once the PIC received the 78 bytes will start transmitting them serially at 27 Khz with a frame and subframe structure. Will transmit them in about 99 msec and will have 80 msec to fetch the new frame of 78 bytes from the PC. This is the loop the PIC program will do.
+Details of timming, frame structure and flow chart of PIC code will be added here tomorrow. 
+
+
+Additional information: Submitted on 10/30/2013 at 12:50 EDT
+Here is the flowchart of the PIC code, the timing of the frame structure for the clock and data lines and an schematic diagram of the PIC interface to the rest of the circuit.
+There is typo on the first waveform of the timing diagram. All three values indicated are actualy microseconds, not miliseconds as show. So the actual sub-frame duration is 2.276 ms. The off-time as indicated here is 10 - 85 ms; we will use 80 msec. And finally the time of transmission then will be 99 msec. That is the size of the frame. 
+
+
+
