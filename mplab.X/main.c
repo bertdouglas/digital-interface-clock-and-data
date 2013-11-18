@@ -1,4 +1,11 @@
-
+/*------------------------------------------------------------------------------
+project name:    Digital Interface - Clock And Data
+intermediary:    getacoder.com
+buyer id:        <Hilario>
+provider id:     <bertdouglas> (George H. Douglas)
+provider email:  georgehdouglas@gmail.com
+start date:      12 November 2013 
+*/
 
 #include <xc.h>
 #include <stdint.h>
@@ -15,7 +22,7 @@ Device Pinout for 18 pin DIP
 
     ===========      ==================      ===========
      Other PIC         PIC pins and           Other PIC 
-    use of note         GPIO usage           use of note
+    use of note         Port usage           use of note
     ===========      ==================      ===========
                            _   _ 
                      A2  1| |_| |18  A1
@@ -36,7 +43,7 @@ Application pin assignments
 ---------------------------
 
     ===   ====   ======     ===============================
-    Pin   GPIO   Signal     Note
+    Pin   Port   Signal     Note
     ===   ====   ======     ===============================
      17    A0    PCD0       Parallel input from PC.
      18    A1    PCD1       "
@@ -64,11 +71,11 @@ Application pin assignments
     ===   ====   ======     ===============================
 
 
-GPIO Register usage
+Port Register usage
 -------------------
 
             +------+------+------+------+------+------+------+------+
-    GPIO    | RA7  | RA6  | RA5  | RA4  | RA3  | RA2  | RA1  | RA0  |
+    Bits    | A7   | A6   | A5   | A4   | A3   | A2   | A1   | A0   |
             +------+------+------+------+------+------+------+------+
     Use     |(none)|(none)| DR   | ACK- | PCD3 | PCD2 | PCD1 | PCD0 |
             +------+------+------+------+------+------+------+------+
@@ -77,7 +84,7 @@ GPIO Register usage
 
 
             +------+------+------+------+------+------+------+------+
-    GPIO    | RB7  | RB6  | RB5  | RB4  | RB3  | RB2  | RB1  | RB0  |
+    Bits    | B7   | B6   | B5   | B4   | B3   | B2   | B1   | B0   |
             +------+------+------+------+------+------+------+------+
     Use     |(none)|(none)| DATA | CLK  | PCD7 | PCD6 | PCD5 | PCD4 |
             +------+------+------+------+------+------+------+------+
@@ -114,8 +121,8 @@ All input and output is done using these functions.
 If it is necessary to reassign I/O pins, 
 only these functions need to be changed.
 
-The compiler is not able to optimize local variables into registers.
-So I am using using macros instead, in some places.
+The compiler is not able to optimize local variables into registers, or
+to inline functions.  So I am using using macros instead, in some places.
 */
 
 // configure once at power on
@@ -132,26 +139,54 @@ void device_configure(void) {
   }
   while ( ! ready );
 
-  // increase clock to 16 MHZ (see DS41391D page 56,65)
+  // set clock (also known as FOSC) to 16 MHZ (see DS41391D page 56,65)
   OSCCONbits.IRCF = 0b1111;
+  #define FOSC (16000000)
 
-  // for use by __delay_us() function
-  #define _XTAL_FREQ (16000000)
+  // The PIC16 has four clocks per instruction cycle
+  #define FCYC (FOSC/4)
+
+  // for use internally by __delay_us() function
+  #define _XTAL_FREQ (FOSC)
+
+  // for use to scale arguments to _delay() function
+  // ICPM = instruction cycles per microsecond
+  #define ICPM (FCYC/1000000)
+
+  // Timer0 pre-scale is set to give an overflow period of 1024 microseconds.
+  // timer0 period = pre-scale*range/ICPM = 16*256/4 = 1024 microseconds
+  // pre-scale = 1024 * ICPM / 256 = 16
+  // Range is 256 because timer0 is an 8-bit counter.
+
+  // timer0 pre-scale  (see DS41391D page 176)
+  OPTION_REGbits.PS = 0b011;   // 16 instruction cycles (FCYC)
 
   // port A 
   TRISA = 0b11101111;
-  LATA  = 0b00010000;   // ACK=1
-
+  LATA  = 0b00010000;   // 'ACK-' = 1  (inactive)
 
   // port B
   TRISB = 0b11001111;
   LATB  = 0b00000000;
 }
 
+// track long times coarsely in milliseconds (actually 1024 microseconds)
+uint8_t timer_ms;  
+void timer_keep(void) {
+  // hardware counter has wrapped 
+  // see file in this project:  examples/09_Timer0/timer0.c
+  if (INTCONbits.TMR0IF) {
+    // clear wrap flag
+    INTCONbits.T0IF = 0;
+    // update software counter
+    timer_ms += 1;
+  }
+}
+
 // get parallel data input from pc
 #define pcd_data_in               \
-  ((PORTA & 0b00001111) << 4) |   \
-  ((PORTB & 0b00001111) << 0)
+  ((PORTA & 0b00001111) << 0) |   \
+  ((PORTB & 0b00001111) << 4)
 
 // check if data is ready
 #define pcd_ready()   \
@@ -176,8 +211,14 @@ void device_configure(void) {
     ( PORTB         & 0b11011111 )  |   \
     ( (~((_d&1)-1)) & 0b00100000 )
 
+
 /*------------------------------------------------------------------------------
 Original specification from getacoder.com
+
+Also see these files:
+  specs/pic circuit.pdf
+  specs/proposal.txt
+
 
 Description
 
@@ -197,7 +238,6 @@ Details of timming, frame structure and flow chart of PIC code will be added
 here tomorrow. 
 
 Additional information: Submitted on 10/30/2013 at 12:50 EDT
-(See file "pic circuit.pdf" in this directory)
 
 Here is the flowchart of the PIC code, the timing of the frame structure for 
 the clock and data lines and an schematic diagram of the PIC interface to the 
@@ -329,7 +369,7 @@ Level 4 framing, frame4 (called frame in spec)
 // Independent timing constants
 
 // FIXME temporary for testing
-#define T0 (18)
+#define T0 (18.5)
 #define Tframe0_gap (100)
 #define Tframe1_gap (1000)
 #define Tframe2_gap (10000)
@@ -352,9 +392,13 @@ uint8_t * data_ptr;
 /*------------------------------------------------------------------------------
 Serial output functions
 
-Times with offsets, such as T0-4, were adjusted with the stopwatch feature
-in the simulator.  The nop() was added to get timing exact.
+Times with offsets were adjusted with the stopwatch feature
+in the simulator.
 */
+
+// convert microseconds to instruction cycles
+#define m2i(_m)          \
+  ((uint32_t)(_m*ICPM))
 
 void frame0(void) {
   uint8_t d,n;
@@ -362,42 +406,36 @@ void frame0(void) {
   n = 8;
   do {
     serial_data_out(d);
-    __delay_us(T0-4);
+    _delay(m2i(T0)-18);
     serial_clock_hi();
     d >>= 1;
     n -= 1;
-    __delay_us(T0-1);
+    _delay(m2i(T0)-6);
     serial_clock_lo();
   }
   while (n);
 
   serial_data_out(0);
-  __delay_us(Tframe0_gap-26);
-  _nop();
 }
 
 void frame1(void) {
   uint8_t n;
   for ( n=6; n!=0; n-- ) {
-    frame0();
+    frame0();  _delay(m2i(Tframe0_gap)-104);
   }
-  __delay_us(Tframe1_gap);
 }
 
 void frame2(void) {
   uint8_t n;
-    for ( n=6; n!=0; n-- ) {
-    frame1();
+  for ( n=6; n!=0; n-- ) {
+    frame1();  _delay(m2i(Tframe1_gap)-0);
   }
-  __delay_us(Tframe2_gap);
 }
 
 void frame3(void) {
-  frame2();  
-  frame2();
-  frame1();
-  // There is no gap delay here.
-  // Input from host is done during this time.
+  frame2();  _delay(m2i(Tframe2_gap)-0);
+  frame2();  _delay(m2i(Tframe2_gap)-0);
+  frame1();  _delay(m2i(Tframe1_gap)-0);
 }
 
 
