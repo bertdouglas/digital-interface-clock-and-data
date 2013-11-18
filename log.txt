@@ -90,6 +90,97 @@ would be inlined, I hope.  Perhaps there is an inline keyword.
 
 Check if response from hilario. No.
 
+Having trouble with simulator.
+    org.netbeans.modules.viewmodel.TreeModelNode[name=][Name=, displayName=Line /home/bertd/dev-mine/digital-interface-clock-and-data/mplab.X/main.c:355 - Not resolvable to a valid memory address
+    ]	
+
+Can set break point.  But then when I start, it says it can't resolve address.
+Sometimes can manage to break, and then do single stepping.
+
+Learned a little.  I have only one build configuration, called "default".
+Apparently i should have one called debug and prodcuction.  Not sure about
+how this mapping works.  Anyway, not compiling for debug, and so some lines
+are rearranged and optimized out.
+Set debug option.
+
+Turned off optimization and on debug.  No apparent change in behavior, though
+I see changes in command lines.
+Some lines you can set breakpoints on, and others you cannot.
+However, once you find a place to break, it seems that you can single step
+from there ok.
+
+Read simulator manual.  Perhaps there is a way to see output bits in
+time domain as a waveform.  Simulator help is dead link.
+
+Find assembler listing.  Study generated code.  Seeing awkwardness when
+assigning to bit field.  Getting code like this:
+
+   695                           ;main.c: 171: LATBbits.LATB4 = c;
+   696  07A6  0870               	movf	serial_clock_out@c,w
+   697  07A7  0022               	movlb	2	; select bank2
+   698  07A8  1D03               	skipz
+   699  07A9  160D               	bsf	13,4	;volatile
+   700  07AA  1903               	skipnz
+   701  07AB  120D               	bcf	13,4	;volatile
+
+Definitely not getting inlined.  And not sure i would want it.
+This code is huge.  Boy am I glad I am using c.
+
+The bad thing about this is that the timing varies depending on if the 
+clock is going high or low.  Perhaps change the argument to clock_out
+to be all 1s or all 0s.  Then and with the appropriate bit flag, and
+or into the control register.  I think there is a way to do that.
+
+Studied compiler features and license price.
+Decide to stick with the free compiler.
+
+Found stopwatch feature in simulator.  Set two breakpoints, find time
+between them.  Have not tried.
+
+Converted nearly all i/o functions to macros.
+Got shorter and more consistent code.  Inline too.
+Now using 7 percent of program memory.
+All that is left to add in the input loop.  At most that will be about
+the same as what is already done.  Looking good.
+
+break several hours
+------------------
+
+Read about stop watch.  Got it going.
+Times are 4x too large.
+Divide xtal freq by 4.
+Not sure what is going on here.
+Need to count cycles, and check.
+
+But it looks as if my data out function is taking too long,
+Even if the delay is reduced to zero.
+
+Found option in project config for simulator.
+There is property that sets the simulated Fcyc frequency.
+Instruction execution frequency.
+This nomenclature is different from that used in data sheet.
+Was set to Fcyc=1
+
+Got times adjusted exactly.  Fairly sure it is correct.  Not much margin.
+Came out almost exactly.  I think this project may be a test, just to see
+if I can produce.  Actually not a bad idea.
+
+Need to rethink my timing constants.  Not fitting what can be easily
+measured.
+
+Groom the ttd list.
+Timing for frame0 is perfect.  Clock spacing bit to bit, and also
+frame to frame.
+
+
+
+
+
+
+
+
+
+
 
 
 

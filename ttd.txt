@@ -33,20 +33,66 @@ Make regularized frame timing hierarchy.
   with the code.
   Done.
 
-
-Make a python script to generate timing costants.
-  Do this numerically. Use in both code and in docs.
-
-Submit timing diagrams and constants for review.
-  No response to my last message.  How to submit.
-
 Check that functions are being inlined
   this is to reduce stack usage, and to increase speed.
   if not inlined by default, look for inline keyword.
+  After reading compiler manual, it now seems this is not going to work.
+  It seems that the PRO version of compiler is required.
+  Ignore inlining.
+
+Reduce overhead for simple n times loop
+  using for (i=n; i!=0, i--)
+  huge amount of overhead, rougly 20 microseconds
+  need to reduce this to meet timing constraint
+  ---- 
+  was unable to reduce it much.  A little.
+  however, was able to use a do while and distribute the overhead
+  into places where already doing a delay.
+  Good enough.
+
+Try changing buffer reference to use pointer
+  instead of current use of subscript
+  try to balance the loop overhead, move pointer increment to end
+  ---
+  using pointer is only slightly faster than using index
+  doesn't matter where the pointer increment is done.
+  Now using pointer.
+  Tried to understand effect of "near" on pointers.  Failed.
+  Closed.
+
+Verify delay times by counting cycles.
+  Make sure the delay makes sense, considering the clock rate
+  I have selected.  There is mystery factor of 4.
+  Does the simulator accurate handle changes to the clock ?
+  Try changing the selected clock in OSCCON.
+  -----------
+  discovered mplab project property that sets simulation freq.
+  unfortunately it uses different language than data sheet. 
+  Fcyc rather than Fosc.  Too many free variables.
+  Lots of reading data sheets.  No where does it clearly say this,
+  but there is one diagram showing a four phase clock used for 
+  internal execution of instructions.  Q1,Q2,Q3,Q4
+  Set Fcyc to 4 MHZ.  Set XTAL_FREQ to 16 MHZ.
+  The nop is taking 0.25 microseconds in stopwatch now, and in general
+  that (0.25) microsecond is the smallest quantum of time observed.
+  Times in stopwatch are matching times in __delay_us().
+  Satisfied.
 
 Figure out how to use simulator
   Code now set up to do output in a loop continuously.  No input.
   It is ready to run.  Need to verify timing in simulator.
+  Done.
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+Submit timing diagrams and constants for review.
+  No response to my last message.  How to submit?
+
+Make a python script to generate timing costants.
+  Do this numerically. Use in both code and in docs.
+  Having second thoughts if this is necessary.
+
 
 Figure out how to use the timer
   This is needed so that it is possible to do PC input, while 
@@ -60,6 +106,20 @@ Go back and review timing hierarchy.
   Make sure pyton generator and spreadsheet are consistent.
   Should gap4 be shown before frame4 ?
   Is the frame4 step even needed ?
+
+Study generated code
+  look for non-uniform timing, anything big or weird
+  find differences between optimized and not, debug and not
+
+Reconsider timing constants
+  They do not correspond to things that can be easily measured with the
+  stopwatch feature, or with a logic analyzer.
+  Probably ought to go back
+
+Consider moving to the _delay() function which operates in cycles,
+  rather than __delay_us().  Can get exactly cycle accurate, without
+  adding/subtracting nops.  Would have to adjust the time constants
+  to be in units of cycles.  Need to keep integer math.
 
 
 

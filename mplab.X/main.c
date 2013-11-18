@@ -101,41 +101,42 @@ set configuration words
   IESO     = OFF    ,     \
   LVP      = OFF    ,     \
   MCLRE    = OFF    ,     \
-  PLLEN    = ON     ,     \
+  PLLEN    = OFF    ,     \
   PWRTE    = OFF    ,     \
   STVREN   = OFF    ,     \
   WDTE     = OFF    ,     \
   WRT      = OFF
 
 /*------------------------------------------------------------------------------
-Primitive application domain I/O functions
+Primitive application domain I/O functions/macros
 
 All input and output is done using these functions.
 If it is necessary to reassign I/O pins, 
 only these functions need to be changed.
+
+The compiler is not able to optimize local variables into registers.
+So I am using using macros instead, in some places.
 */
 
 // configure once at power on
 void device_configure(void) {
 
-  // wait until it is ok to increase clock speed
-  // and until clock is accurate
+  // wait until HF PLL is stable
   // (see DS41391D page 66)
   bool ready = false;
   do {
     ready = 
-      OSCSTATbits.PLLR     &&
       OSCSTATbits.HFIOFR   &&
       OSCSTATbits.HFIOFL   &&
       OSCSTATbits.HFIOFS;
   }
   while ( ! ready );
 
-  // increase clock to 16 MHZ (see DS41391D page 65)
+  // increase clock to 16 MHZ (see DS41391D page 56,65)
   OSCCONbits.IRCF = 0b1111;
 
-  // for use by __delay_us() and __delay_ms() functions
-  #define _XTAL_FREQ 16000000
+  // for use by __delay_us() function
+  #define _XTAL_FREQ (16000000)
 
   // port A 
   TRISA = 0b11101111;
@@ -148,33 +149,32 @@ void device_configure(void) {
 }
 
 // get parallel data input from pc
-uint8_t pcd_data_in(void) {
-  uint8_t hi,lo,d;
-  lo = PORTA & 0b00001111;
-  hi = PORTB & 0b00001111;
-  d  = (hi << 4) | (lo << 0);
-  return d;  
-}
+#define pcd_data_in               \
+  ((PORTA & 0b00001111) << 4) |   \
+  ((PORTB & 0b00001111) << 0)
 
 // check if data is ready
-bool pcd_ready(void) {
-  return PORTAbits.RA5;
-}
+#define pcd_ready()   \
+  PORTAbits.RA5
 
-// acknowledgement output
-void pcd_ack_out(uint8_t a) {
-  LATAbits.LATA4 = a;
-}
+// acknowledgement hi/lo
+#define pcd_ack_hi()   \
+  LATAbits.LATA4 = 1
+#define pcd_ack_lo()   \
+  LATAbits.LATA4 = 0
 
-// serial clock output
-void serial_clock_out(uint8_t c) {
-  LATBbits.LATB4 = c;
-}
+// serial clock hi/lo
+#define serial_clock_hi()   \
+  LATBbits.LATB4 = 1
+#define serial_clock_lo()   \
+  LATBbits.LATB4 = 0
 
 // serial data output
-void serial_data_out(uint8_t d) {
-  LATBbits.LATB5 = d;
-}
+// LSB of d controls output
+#define serial_data_out(_d)             \
+  LATB =                                \
+    ( PORTB         & 0b11011111 )  |   \
+    ( (~((_d&1)-1)) & 0b00100000 )
 
 /*------------------------------------------------------------------------------
 Original specification from getacoder.com
@@ -329,10 +329,11 @@ Level 4 framing, frame4 (called frame in spec)
 // Independent timing constants
 
 // FIXME temporary for testing
-#define T0 18
-#define Tframe0_gap 0
-#define Tframe1_gap 0
-#define Tframe2_gap 0
+#define T0 (18)
+#define Tframe0_gap (100)
+#define Tframe1_gap (1000)
+#define Tframe2_gap (10000)
+#define Tframe3_gap (100000)
 
 
 // Derived timing constants
@@ -345,27 +346,34 @@ Used for both input and output.
 */
 
 #define DATA_BUF_SIZE 78
-uint8_t data_buf[DATA_BUF_SIZE];
-uint8_t data_pos = 0;
+uint8_t   data_buf[DATA_BUF_SIZE];
+uint8_t * data_ptr;
 
 /*------------------------------------------------------------------------------
 Serial output functions
+
+Times with offsets, such as T0-4, were adjusted with the stopwatch feature
+in the simulator.  The nop() was added to get timing exact.
 */
 
 void frame0(void) {
   uint8_t d,n;
-  d = data_buf[data_pos];
-  data_pos += 1;
-  for ( n=8 ; n!=0 ; n-- ) {
+  d = *data_ptr++;
+  n = 8;
+  do {
     serial_data_out(d);
-    __delay_us(T0);
-    serial_clock_out(1);
-    __delay_us(T0);
-    serial_clock_out(0);
+    __delay_us(T0-4);
+    serial_clock_hi();
     d >>= 1;
+    n -= 1;
+    __delay_us(T0-1);
+    serial_clock_lo();
   }
+  while (n);
+
   serial_data_out(0);
-  __delay_us(Tframe0_gap);
+  __delay_us(Tframe0_gap-26);
+  _nop();
 }
 
 void frame1(void) {
@@ -400,7 +408,8 @@ Top level loop
 void main(void) {
   
   for (;;) {
-    data_pos = 0;
+    __delay_us(Tframe3_gap);
+    data_ptr = &data_buf;
     frame3();
   }
 
