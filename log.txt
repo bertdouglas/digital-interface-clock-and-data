@@ -173,6 +173,18 @@ Timing for frame0 is perfect.  Clock spacing bit to bit, and also
 frame to frame.
 
 
+-----------------------------------------------
+
+18 November
+
+Study data book to learn how to use timer.  Lot of details.
+Document it carefully in source code.
+Make an 8 bit counter in ram that increments every 1024 microseconds.
+Approximately 1 millisecond.  Should be good enough.
+
+Is it possible to clear the actual register in timer0 to reduce
+jitter ?
+
 
 
 

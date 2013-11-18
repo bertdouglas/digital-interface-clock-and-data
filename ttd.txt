@@ -83,6 +83,28 @@ Figure out how to use simulator
   It is ready to run.  Need to verify timing in simulator.
   Done.
 
+Consider moving to the _delay() function which operates in cycles,
+  rather than __delay_us().  Can get exactly cycle accurate, without
+  adding/subtracting nops.  Would have to adjust the time constants
+  to be in units of cycles.  Need to keep integer math.
+  ---------
+  Manged to keep times in microseconds with fractions.
+  Scale up to cycles, and cast to integer, all in a macro.
+  Done.
+
+Learn how to debug in assembly mode
+  Very bad docs on this.  Lots of false info on the internet.
+  Finally found something buried in the window menu.  Strange place.
+  Gives access to debug disassembly.  Can set break points and single
+  step.  Stop watch works. Was able to measure setup and hold times.
+  setup = 14.5  hold=4
+
+Hoisted the delays 
+  take from inside frame function 
+  move up to each call of each frame function
+  this is because each call environment affects the delay
+  to make it cycle accurate, have to adjust each one separately.
+  Need the additional degrees of freedom
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -114,13 +136,15 @@ Study generated code
 Reconsider timing constants
   They do not correspond to things that can be easily measured with the
   stopwatch feature, or with a logic analyzer.
-  Probably ought to go back
+  Probably ought to go back to values more like the original spec.
 
-Consider moving to the _delay() function which operates in cycles,
-  rather than __delay_us().  Can get exactly cycle accurate, without
-  adding/subtracting nops.  Would have to adjust the time constants
-  to be in units of cycles.  Need to keep integer math.
 
+Find ways to reduce timing jitter associated with use of timer0.
+  When we start, can the timer0 register be cleared, so we get an
+  even number of periods.
+
+Learn more about the simulator
+  how to use logic analyzer mode, stimulus, etc
 
 
 
