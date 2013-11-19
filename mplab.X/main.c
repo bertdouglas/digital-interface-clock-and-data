@@ -2,6 +2,7 @@
 project name:    Digital Interface - Clock And Data
 intermediary:    getacoder.com
 buyer id:        <Hilario>
+buyer email:     hilario.h@maxavionics.com
 provider id:     <bertdouglas> (George H. Douglas)
 provider email:  georgehdouglas@gmail.com
 start date:      12 November 2013 
@@ -12,6 +13,8 @@ start date:      12 November 2013
 #include <limits.h>
 #include <stdbool.h>
 #include <stddef.h>
+
+#define SIMULATOR 1
 
 /*------------------------------------------------------------------------------
 Pin usage and configuration (PIC16F1826)
@@ -30,7 +33,7 @@ Device Pinout for 18 pin DIP
                      A4  3|     |16  A7      OSC1
     MCLR-,VPP        A5  4|     |15  A6      OSC2
     VSS                  5|     |14          VDD
-                     B0  6|     |13  B7      ICDDAT
+    SRI              B0  6|     |13  B7      ICDDAT
                      B1  7|     |12  B6      ICDCLK
                      B2  8|     |11  B5
                      B3  9|_____|10  B4
@@ -66,7 +69,7 @@ Application pin assignments
      12    B6    ICDCLK     Reserved for in circuit debug
      13    B7    ICDDAT     "
 
-     15    A6    OSC2       Reserved for external oscillator.
+     15    A6    OSC2       Reserved for external crystal.
      16    A7    OSC1       "
     ===   ====   ======     ===============================
 
@@ -128,16 +131,20 @@ to inline functions.  So I am using using macros instead, in some places.
 // configure once at power on
 void device_configure(void) {
 
-  // wait until HF PLL is stable
-  // (see DS41391D page 66)
-  bool ready = false;
-  do {
-    ready = 
-      OSCSTATbits.HFIOFR   &&
-      OSCSTATbits.HFIOFL   &&
-      OSCSTATbits.HFIOFS;
-  }
-  while ( ! ready );
+  // simulator does not seem to support these bits
+  #ifndef SIMULATOR
+    // wait until HF PLL is stable
+    // (see DS41391D page 66)
+    do {} while (
+      #define mask (            \
+        _OSCSTAT_HFIOFS_MASK |  \
+        _OSCSTAT_HFIOFR_MASK |  \
+        _OSCSTAT_HFIOFL_MASK    \
+      )
+      0 == ((~OSCSTAT) & mask);
+      #undef mask
+    );
+  #endif
 
   // set clock (also known as FOSC) to 16 MHZ (see DS41391D page 56,65)
   OSCCONbits.IRCF = 0b1111;
@@ -438,26 +445,41 @@ void frame3(void) {
   frame1();  _delay(m2i(Tframe1_gap)-0);
 }
 
+/*------------------------------------------------------------------------------
+Parallel input
+
+Result is in global "data_buf".
+Always succeeds.  Always takes the same amount of time.
+*/
+
+void input(void) {
+  //_delay(m2i(Tframe3_gap));
+  data_ptr = &data_buf;
+}
+
+// fill data buffer with test pattern
+// for now a constant value in each position
+void test_pattern(void) {
+  uint8_t i;
+  for (i=0; i<DATA_BUF_SIZE; i++) {
+    data_buf[i] = 0xa5;
+  }
+}
 
 /*------------------------------------------------------------------------------
 Top level loop
 */
 
 void main(void) {
-  
-  for (;;) {
-    __delay_us(Tframe3_gap);
-    data_ptr = &data_buf;
-    frame3();
-  }
+  device_configure();
+  test_pattern();
+
+  input();
+  frame3();
+  input();
+  frame3();
 
 }
 
-
-
-
-
-
-
-
+// End -------------------------------------------------------------------------
 

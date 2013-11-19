@@ -146,6 +146,50 @@ Find ways to reduce timing jitter associated with use of timer0.
 Learn more about the simulator
   how to use logic analyzer mode, stimulus, etc
 
+Are oscillator pins available for use as signals
+  is internal oscillator accurate enough?
+  waiting for answer from Hilario
+
+Do we want to use the set reset latch?
+  this can replace two external nand gates
+  it would be pin neutral
+    the strobe would have to go to PIC pin
+    however the latch output would be then available internally
+    and its pin no longer used
+
+hilario wants a way to suspend output until sending side is ready
+  can be handled in software with additional state variable
+  or can add a wait input
+  or can hold the PIC in reset
+
+Possibly add an error signal going back to the host PC
+  parallel ports have a paper error signal
+
+Have proposed using COBS
+  this is beyond scope of project, but could add a new milestone
+  waiting for answer from Hilario
+
+Question about handshaking with PC
+  only the BUSY output is routed back to the PC
+  the parallel port uses both ACK and BUSY
+  is it ok to leave off ACK?  Seems that many times the host ignores ACK.
+
+Another question about handshaking with PC
+  if a traditional parallel port is used, then there is a problem
+  with latching the 8 data bits.  parallel port assumes that the
+  receiver will latch data on rising edge of strobe.  However, PIC
+  has no way to do this.  All inputs are async.  Either non-standard
+  host side handshaking, or a '374 style latch is needed at PIC.
+
+Obtain hardware for test and debug
+  realistically cannot rely on simulator
+  i need to test on real hardware, otherwise customer will be unhappy
+  Bert's law - if it hasn't been fully tested, it doesn't work
+
+
+Another question for Hilario
+  What package is he using ?  DIP ? or something smaller ?
+  Does it matter?  Can I use a DIP for testing ?
 
 
 

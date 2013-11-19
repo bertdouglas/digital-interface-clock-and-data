@@ -185,6 +185,73 @@ Approximately 1 millisecond.  Should be good enough.
 Is it possible to clear the actual register in timer0 to reduce
 jitter ?
 
+Convert delays to use _delay() by instruction cycles.
+More precise.  Also shorter generated code.
+
+Use more derived macros for timing constants.  Fewer values to change.
+
+Study simulator.  Not seeing any wiggles on output signals.
+
+break
+------
+
+Took a nap.  Have idea for why simulator is not showing any activity.
+Did not call device_configure() to set up the output ports.
+
+Got response from hilario.  
+
+Sorry, I was out. Yes, you can publish this work. My Email is hilario.h@maxavionics.com. Write to me there so I won't miss it. In regards to the PIC part number as I told you our equipment does not support that new part number.
+[11/18 15:50:50]<Hilario>:	 I am trying to hold the PIC reset line low at power up to control when the PIC will start transmitting. So the PC program control the transmission. Is that possible?
+
+Set up new project on github.
+
+Respond to hilario by email.
+clock accuracy
+availability of set reset latch to eliminate two nand gates
+can I use oscillator pins
+
+Send second email to hilario, about potential problems.
+Suggest cobs.
+Suggest how to handle the wait for reset without any additional signals.
+
+Study parallel port handshaking.  Some new issues found.  Add entries to
+the ttd list.
+
+try logic analyzer again.  Flat line.  Stuck in loop waiting for clock ready.
+Notice that code is awkward and wastes a byte of ram for variable "ready".
+Recode to avoid.
+
+Perhaps the simulator does not implement this level of hardware fidelity ?
+I think I need to order some hardware to test this myself.
+
+Seeing waveforms on logic analyzer view in simulator.
+There are no cursors to do time interval measurement like in real logic analyzer.
+Only seeing activity on RB4.  This is supposed to be the data output.
+And, I was expecting data to be all zeroes.
+Period is about right for the clock.
+Set a constant value for data.  A nice palindrome  0xA5
+
+Was misinterpreting the legend on the logic analyzer.
+Clock and data are on the right pins.
+Timing looks good, but hard to measure exactly.  Close to stopwatch results.
+Simulator is very slow when logic analyzer is on.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
